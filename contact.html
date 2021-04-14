@@ -1,102 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
         <title>Contact</title>
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
-    
     <body>
-        <div class="header">
-            <div class="logo-container">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            </div>
-            <div class="slogan-container">
-                <h3 class="slogan">Horange Mall</h3>
-            </div>
-            <div class="navbar">
-                <div class="button">
-                    <a href="index.html">Home</a>
-                    <a href="aboutus.html">About Us</a>
-                    <a href="faqs.html">FAQs</a>
-                    <a href="fees.html">Fees</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="myaccount.html">My Account</a>
-                    <div class="dropdown">
-                        <li class="dropbtn">Browse</li>
-                        <div class="dropdown-content">
+        <div class="grid">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <div class="slogan">
+                    <p>Horange Mall</p>
+                </div>
+                <div class="nav-bar">
+                   <div class="item">
+                       <a href="index.html">Home</a>
+                   </div>
+                   <div class="item">
+                       <a href="aboutus.html">About Us</a>
+                   </div>
+                   <div class="item">
+                       <a href="fees.html">Fees</a>
+                   </div>
+                   <div class="item">
+                       <a href="contact.html">Contact</a>
+                   </div>
+                   <div class="item">
+                       <a href="faqs.html">FAQs</a>
+                   </div>
+                   <div class="item">
+                       <a href="login.html">My Account</a>
+                   </div>  
+                   <div class="dropdown">
+                       <a href="" class="dropbtn">Browse</a>
+                       <div class="dropdown-content">
                             <a href="browsebyname.html">Browse By Name</a>
                             <a href="browsebycategory.html">Browse By Category</a>
-                        </div>
-                    </div>
+                       </div>
+                   </div>                 
                 </div>
+                
             </div>
-        </div>
-        <main>
-           <div class="Title-of-store">
-               <h1> Welcome to our store </h1>
-               <p> Address: 703 Nguyen Van Linh, District 7  </p>
-               <p>Phone: 0987654321</p>
-               <p>Email: horange.mall@gmail.com</p>
-           </div>
-           <div class="contact-form">
-               <h1> If you want to contact to the Mall Owner, please fill this form:</h1>
-               <form method="get" action="index.html">
-                <p> purpose of Contact
-                  <select name="purpose of contact">
-                    <option value=''selected> please select</option>
-                    <option value='business'> BUSINESS</option>
-                    <option value='personal'>PERSONAL</option>
-                  </select>
-                </p>
-                <div> Name
-                  <input type="text" name="Name" maxlength="50">
-                </div>
-                <div> Email
-                  <input type="email" name="Email">
-                </div>
-                <div>Phone number
-                  <input type="number" name="phone number">
-                </div>
-                <div> Preferred contact
-                  <input type=radio name="preferred contact"> <label for="preferred contact">Phone</label>
-                  <input type=radio name="preferred contact"> <label for="preferred contact">Email</label>
-                </div>
-                <div> Contact day(s)
-                  <input type="checkbox"name='mon' value="monday"/><label for='mon'>Monday</label>
-                  <input type="checkbox"name='tue' value="tuesday"/><label for='tue'>Tuesday</label>
-                  <input type="checkbox"name='wed' value="wednesday"/><label for='wed'>Wednesday</label>
-                  <input type="checkbox"name='thu' value="thursday"/><label for='thu'>Thursday</label>
-                  <input type="checkbox"name='fri' value="friday"/><label for='fri'>Friday</label>
-                  <input type="checkbox"name='sat' value="saturday"/><label for='sat'>saturday</label>
-                  <input type="checkbox"name='sun' value="sunday"/><label for='sun'>Sunday</label>
-                </div>
-                <div> Message
-                    <textarea cols='80' rows='9'>
-                    </textarea>
+
+            <div class="content">
+
+             <div class="Title-of-store">
+                 <h1> Welcome to our store </h1>
+                 <p> Address: 703 Nguyen Van Linh, District 7  </p>
+                 <p>Phone: 0987654321</p>
+                 <p>Email: horange.mall@gmail.com</p>
+             </div>
+             <div class="contact-form">
+                 <h1> If you want to contact to the Mall Owner, please fill this form:</h1>
+                 <form method="get" action="index.html">
+                  <p> purpose of Contact
+                    <select name="purpose of contact">
+                      <option value=''selected> please select</option>
+                      <option value='business'> BUSINESS</option>
+                      <option value='personal'>PERSONAL</option>
+                    </select>
+                  </p>
+                  <div> Name
+                    <input type="text" name="Name" maxlength="50">
                   </div>
-            
-                  <div> 
-                    <input type="reset" value="Clear">
-                    <input type="submit" value = "Send">
+                  <div> Email
+                    <input type="email" name="Email">
                   </div>
-                  <div>
-           </div>
-           
-        </main>
+                  <div>Phone number
+                    <input type="number" name="phone number">
+                  </div>
+                  <div> Preferred contact
+                    <input type=radio name="preferred contact"> <label for="preferred contact">Phone</label>
+                    <input type=radio name="preferred contact"> <label for="preferred contact">Email</label>
+                  </div>
+                  <div> Contact day(s)
+                    <input type="checkbox"name='mon' value="monday"/><label for='mon'>Monday</label>
+                    <input type="checkbox"name='tue' value="tuesday"/><label for='tue'>Tuesday</label>
+                    <input type="checkbox"name='wed' value="wednesday"/><label for='wed'>Wednesday</label>
+                    <input type="checkbox"name='thu' value="thursday"/><label for='thu'>Thursday</label>
+                    <input type="checkbox"name='fri' value="friday"/><label for='fri'>Friday</label>
+                    <input type="checkbox"name='sat' value="saturday"/><label for='sat'>saturday</label>
+                    <input type="checkbox"name='sun' value="sunday"/><label for='sun'>Sunday</label>
+                  </div>
+                  <div> Message
+                      <textarea cols='80' rows='9'>
+                      </textarea>
+                    </div>
+
+                    <div> 
+                      <input type="reset" value="Clear">
+                      <input type="submit" value = "Send">
+                    </div>
+                    <div>
+             </div>
+           </div> 
         <footer>
             <div class="copyrights">
                 <a href="copyrights.html">2021 Horange. All Rights Reserved</a>            
             </div>       
             <div class="tos">
                 <a href="tos.html">Terms of Service</a>
+
             </div>
-            <div class="privacy">
-                <a href="privacy.html">Privacy Policies</a>
+            <div class="footer">
+                <div class="copyrights">
+                    <a href="copyrights.html"><span>&copy;</span>Horange. All Rights Reserved</a>
+                </div>
+                <div class="tos">                    
+                    <a href="tos.html">Terms of Service</a>
+                </div>
+                <div class="privacy">
+                    <a href="privacy.html">Privacy Policies</a>
+                </div>
             </div>
-        </footer>
+        </div>
     </body>
 </html>
