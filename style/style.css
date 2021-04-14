@@ -22,47 +22,38 @@ margin: auto;
 .header{
 height: 10vh;
 margin: auto;
-display: flex;
 width: 80%;
-background-color: aqua;
-
 }
 
 .logo-container{
 height: 100%;
-align-items: flex-end;
-position: relative;
-background-color: aqua;
+width: 10%;
 float: left; 
+padding: 5px;
 }
 
 .logo-container img{
 height: 100%;
 width: auto;
-align-items: flex-end;
-position: absolute;
 }
 
-.slogan-container{
-position: relative;  
+.slogan-container{ 
 padding: 5px;
-flex: 1;
 float: left;
+margin: auto;
+width: 15%;
 
 }
 .slogan{
 font-weight: 400;
-padding: inherit;
-position: relative;
+padding: 5px;
 right: 5px;
 
 }
 .navbar {
 overflow: hidden;
-display: flex;
-align-items: flex-end;
-width: 80%;
-flex: 3;
+width: 75%;
+float: left;
 }
 
 .navbar a {
