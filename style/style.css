@@ -1,6 +1,7 @@
 /*global style*/
 
 *{
+
 margin: 0px;
 padding: 0px;
 box-sizing: border-box;
@@ -15,11 +16,28 @@ main{
 padding: 100px;
 width: 100%;
 margin: auto;
+
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+  padding: 100px;
+  width: 100%;
+  margin: auto;
+
 }
 
 /*header style*/
 
 .header{
+
 height: 10vh;
 margin: auto;
 width: 80%;
