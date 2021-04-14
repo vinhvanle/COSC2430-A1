@@ -1,61 +1,54 @@
-
-  body
+body
 {
   font-family: cursive;
+  font-size: 30px;
   margin:0;
   padding:0;
   background-size: cover;
   background-color: #FF8C00;
 }
 .sign-form{
-  width: 300px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  width: 70%;
   border-radius: 20px;
   background: #fff;
-  padding: 100px;
-  margin: 10px auto 0;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 15%;
 }
 .sign-form h1 {
   color: #3dc23e;
-  margin-bottom: 10px;
 }
 .signin-box{
   border-radius: 20px;
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
+  margin: 5%;
+  padding: 5%;
+  width: 70%;
   border: 1px solid #999;
   outline: none;
-  position: relative;
-  right:5px;
+  font-size: 20px;
+
 }
 .signup-box{
   border-radius: 20px;
-  width: 100%;
-  padding: 15px;
-  margin: 3px 0;
+  width: 70%;
+  padding: 3%;
+  margin: 3%;
   border: 1px solid #999;
   outline: none;
-  position: relative;
-  right:5px;
+  font-size:20px;
 }
 button{
   color: #fff;
   border-radius: 20px;
-  padding: 10px;
-  font-size: 15px;
-  margin: 10px ;
-  width: 100%;
+  padding: 5%;
+  margin: 5% 0 ;
+  width: 70%;
   border: none;
   outline: none;
   cursor: pointer;
+  font-size: 30px;
 }
 .sign-button{
   background-color: #3dc23e;
-  position: relative;
-  left :2px;
 
 }
 .sign-button:hover{
@@ -66,60 +59,76 @@ button{
   text-decoration: none;
   color: #3dc23e;
   display: block;
-  position: relative;
-  left: 5px;
-
+  padding-bottom : 15%;
 }
 .und:hover{
   background: #fff;
   color: #FF8C00;
 }
 hr{
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 5%;
+  width: 70%;
 }
 img{
   width:40%;
 }
 .inner-box{
-  margin-bottom: 10px;
+  width: 100%;
 }
 .country{
   border-radius: 20px;
-  margin-top: 10px;
+  margin-top: 5%;
   width: 100%;
-  position: relative;
-  left: 5px;
   font-family: cursive;
 }
-.type{
-  margin: 10px;
+.account-type{
+  background-color: #fff;
+  text-align: center;
   border-radius: 20px;
+  margin: 5%;
+
 }
-#owner{
-  margin-top: 10px;
+.typee{
+  text-decoration: none;
+  color: #fff;
 }
-#shopper{
-  margin-top: 10px;
+.account-type .type .owner{
+  border-radius: 20px;
+  margin-left: 5%;
+  width: 30%;
+  background-color: #3dc23e;
+}
+.account-type .type .owner:hover{
+  background-color: #FF8C00;
+  color: #fff;
+}
+.account-type .type .shopper{
+  border-radius: 20px;
+  margin-right: 5%;
+  width: 30%;
+  background-color: #3dc23e;
+}
+.account-type .type .shopper:hover{
+  background-color: #FF8C00;
+  color: #fff;
 }
 .form-container {
-  width: 300px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  width: 70%;
   border-radius: 20px;
   font-family: cursive;
   background: #fff;
-  padding: 100px;
-  margin: 10px auto 0;
+  margin: 15%;
   text-align: center;
-  margin-bottom: 20px;
+}
+.form-container img{
+  width: 90%;
 }
 .fg-box {
   border-radius: 20px;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  margin-top: 0px;
+  width: 70%;
+  padding: 5%;
   border: 1px solid #999;
+  font-size: 20px;
   outline: none;
 }
 .send{
@@ -127,11 +136,26 @@ img{
   outline: none;
   background-color:  #3dc23e;
 }
+.send:hover{
+  background-color: #FF8C00;
+  color: #fff;
+}
 .form-container h2{
   color: #3dc23e;
 }
 .sign-form img{
-  width: 300px;
+  width: 90%;
 }
 .country select{
+  font-size: 30px;
+  margin: auto;
+  margin-top: 5%;
+}
+.clear{
+  width: 50%;
+  background-color: #3dc23e;
+}
+.clear:hover{
+  background-color: #FF8C00;
+  color: #fff;
 }

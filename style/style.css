@@ -4,11 +4,12 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+
 }
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#FF8C00;
 }
 
 main{
@@ -24,7 +25,7 @@ main{
     margin: auto;
     display: flex;
     width: 80%;
-   
+
   }
   .logo-container, .slogan-container, .navbar{
     display: flex;
@@ -34,54 +35,55 @@ main{
     align-items: flex-end;
     position: relative;
     background-color: aqua;
-    float: left; 
+    float: left;
   }
-  
+
   .logo-container img{
     height: 100%;
     width: auto;
     align-items: flex-end;
     position: absolute;
   }
-  
+
   .slogan-container{
-    position: relative;  
+    position: relative;
     padding: 5px;
     flex: 1;
     float: left;
-  
+
   }
   .slogan{
     font-weight: 400;
     padding: inherit;
     position: relative;
     right: 5px;
-  
+
   }
   .navbar {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    width: 80%;
+    width: 100%;
     flex: 3;
   }
-  
+
   .navbar a {
     float: left;
     font-size: 16px;
-    color: black;
+    color: #black;
     text-align: center;
     padding: 14px 16px;
+    width: 10%;
     text-decoration: none;
   }
-  
+
   .dropdown {
     float: left;
     overflow: hidden;
   }
-  
+
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: black;
@@ -90,11 +92,11 @@ main{
     font-family: inherit;
     margin: 0;
   }
-  
+
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: orange;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -103,7 +105,7 @@ main{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+
   .dropdown-content a {
     float: none;
     color: black;
@@ -112,17 +114,18 @@ main{
     display: block;
     text-align: left;
   }
-  
+
   .dropdown-content a:hover {
     background-color: #ddd;
   }
-  
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
 /* main style*/
 .section{
     width: 90%;
+    margin: 5%;
 
 }
 .grid-container{
@@ -134,24 +137,41 @@ main{
     border: 1px solid black;
     padding: 5px;
     text-align: center;
+    border-radius: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: #3dc23e;
+    color: #fff;
 }
 
 .grid-item-display{
     border: 1px solid black;
     padding: 15px;
     text-align: center;
+    border-radius: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    background: #fff;
 }
 
 .grid-item-price{
     border: 1px solid black;
     padding:5px;
     text-align: center;
+    border-radius: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    background: #fff;
 }
 
 .grid-item-description{
     border: 1px solid black;
     padding: 5px;
     text-align: center;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    background: #fff;
 }
 
 .section-tittle{
@@ -162,10 +182,9 @@ main{
 /* Footer style*/
 
 footer{
-    display: flex;
-    height: 10%;
-    margin: auto;
-    width: 100%;
+  display: flex;
+    margin: 5%;
+    width: 90%;
     padding: 50px 0px 50px 0px;
     border-top: 1px double black;
 
@@ -187,6 +206,8 @@ footer{
 
 .tos a{
     text-decoration: none;
+    position: relative;
+    left: 35%;
 }
 
 .privacy{
@@ -196,5 +217,6 @@ footer{
 
 .privacy a{
     text-decoration: none;
-}
+    float: right;
 
+}
