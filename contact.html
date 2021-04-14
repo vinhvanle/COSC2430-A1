@@ -36,7 +36,56 @@
             </div>
         </div>
         <main>
-           main content goes here
+           <div class="Title-of-store">
+               <h1> Welcome to our store </h1>
+               <p> Address: 703 Nguyen Van Linh, District 7  </p>
+               <p>Phone: 0987654321</p>
+               <p>Email: horange.mall@gmail.com</p>
+           </div>
+           <div class="contact-form">
+               <h1> If you want to contact to the Mall Owner, please fill this form:</h1>
+               <form method="get" action="index.html">
+                <p> purpose of Contact
+                  <select name="purpose of contact">
+                    <option value=''selected> please select</option>
+                    <option value='business'> BUSINESS</option>
+                    <option value='personal'>PERSONAL</option>
+                  </select>
+                </p>
+                <div> Name
+                  <input type="text" name="Name" maxlength="50">
+                </div>
+                <div> Email
+                  <input type="email" name="Email">
+                </div>
+                <div>Phone number
+                  <input type="number" name="phone number">
+                </div>
+                <div> Preferred contact
+                  <input type=radio name="preferred contact"> <label for="preferred contact">Phone</label>
+                  <input type=radio name="preferred contact"> <label for="preferred contact">Email</label>
+                </div>
+                <div> Contact day(s)
+                  <input type="checkbox"name='mon' value="monday"/><label for='mon'>Monday</label>
+                  <input type="checkbox"name='tue' value="tuesday"/><label for='tue'>Tuesday</label>
+                  <input type="checkbox"name='wed' value="wednesday"/><label for='wed'>Wednesday</label>
+                  <input type="checkbox"name='thu' value="thursday"/><label for='thu'>Thursday</label>
+                  <input type="checkbox"name='fri' value="friday"/><label for='fri'>Friday</label>
+                  <input type="checkbox"name='sat' value="saturday"/><label for='sat'>saturday</label>
+                  <input type="checkbox"name='sun' value="sunday"/><label for='sun'>Sunday</label>
+                </div>
+                <div> Message
+                    <textarea cols='80' rows='9'>
+                    </textarea>
+                  </div>
+            
+                  <div> 
+                    <input type="reset" value="Clear">
+                    <input type="submit" value = "Send">
+                  </div>
+                  <div>
+           </div>
+           
         </main>
         <footer>
             <div class="copyrights">
