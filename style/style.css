@@ -20,15 +20,14 @@ main{
 /*header style*/
 
 .header{
-    height: 5vh;
+    height: 10vh;
     margin: auto;
     display: flex;
     width: 80%;
+    background-color: aqua;
    
   }
-  .logo-container, .slogan-container, .navbar{
-    display: flex;
-  }
+ 
   .logo-container{
     height: 100%;
     align-items: flex-end;
