@@ -8,7 +8,7 @@
 }
 
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: cursive;
     background-color:#FF8C00;
 }
 
@@ -141,6 +141,7 @@ main{
     margin-right: 5%;
     margin-left: 5%;
     background-color: #3dc23e;
+    font-size: 30px;
     color: #fff;
 }
 
@@ -171,11 +172,17 @@ main{
     border-radius: 10px;
     margin-right: 5%;
     margin-left: 5%;
-    background: #fff;
+    background: #3dc23e;
+    color: #black;
 }
 
 .section-tittle{
-    text-align: center;
+  text-align: center;
+    margin: 5%;
+    background-color: #3dc23e;
+    border-radius: 20px;
+    padding: 20px;
+
 
 }
 
