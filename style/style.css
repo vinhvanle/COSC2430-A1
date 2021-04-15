@@ -39,7 +39,7 @@
 
 .nav-bar{
   display: grid;
-  grid-template-columns: repeat(14, 2fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 20px;
 }
 
@@ -127,11 +127,11 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: wheat;
   text-align: center;
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
   border: 1px solid black;
 }
+
+
+
 
 .box2{
   background-color: antiquewhite;
