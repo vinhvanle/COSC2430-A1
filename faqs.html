@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style.css">
-        <title>FAQs</title>
+        <title>Horange Home Page</title>
     </head>
     <body>
+
         <div class="grid">
+
             <div class="header">
                 <div class="logo">
                     <a href="index.html"><img src="img/logo.png" alt="logo"></a>
@@ -41,23 +43,69 @@
                             <a href="browsebycategory.html">Browse By Category</a>
                        </div>
                    </div>                 
-                </div>
-                
+                </div>                
             </div>
-            <div class="content">
-                main content goes here
+
+        <div class="content">
+            <style>
+                .accordion {
+                background-color: rgb(235, 161, 78);
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                text-align: left;
+                border: none;
+                outline: none;
+                transition: 0.4s;}
+                .panel {
+                padding: 0 18px;
+                background-color: white;
+                display: none;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.2s ease-out;}
+                .active, .accordion:hover {
+                background-color: #ccc;}
+                .accordion:after {
+                content: '\02795'; 
+                font-size: 13px;
+                color: #777;
+                float: right;
+                margin-left: 5px;}
+        
+            </style>
+            <h1> Frequently Asked Questions</h1>
+            <button class="accordion">Who can register for a membership card?</button>
+            <div class="panel">
+                <p>All citizens having identity card and above 18 years old can apply for an member card</p>
             </div>
-            <div class="footer">
-                <div class="copyrights">
-                    <a href="copyrights.html"><span>&copy;</span>Horange. All Rights Reserved</a>
-                </div>
-                <div class="tos">                    
-                    <a href="tos.html">Terms of Service</a>
-                </div>
-                <div class="privacy">
-                    <a href="privacy.html">Privacy Policies</a>
-                </div>
+
+            <button class="accordion">What should customer do when they forgot password to login to Horange Mall Home?</button>
+            <div class="panel">
+                <p>Please choose the "forgot password" on the app when they stating to login, it will recover the password via sending email</p>
+            </div>
+
+            <button class="accordion">Is is possible to change the personal information on the Horange Mall Home?</button>
+            <div class="panel">
+                <p>Horange Mall Home allows users to update quickly the basic information such as Name, DOB, address, etc.</p>
+            </div>
+                 </p>
+        </div>
+
+        <div class="footer">
+            <div class="copyrights">
+                <a href="copyrights.html"><span>&copy;</span>Horange. All Rights Reserved</a>
+            </div>
+            <div class="tos">                    
+                <a href="tos.html">Terms of Service</a>
+            </div>
+            <div class="privacy">
+                <a href="privacy.html">Privacy Policies</a>
             </div>
         </div>
-    </body>
+        
+    </div>
+
+</body>
 </html>
