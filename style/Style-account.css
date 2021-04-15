@@ -7,15 +7,29 @@ body
   background-size: cover;
   background-color: #FF8C00;
 }
+@media screen and (min-width:375px) and (max-width:1024px) {
+}
 .sign-form{
-  width: 30%;
+  width: 60%;
   border-radius: 20px;
   background: #fff;
   text-align: center;
-  margin-left: 35%;
-  margin-top:5%;
+  margin-left : 20%;
+  margin-top: 5%;
   margin-bottom: 5%;
-
+}
+@media screen and (max-width:767px){
+  .sign-form{
+    margin-top: 40%;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+  .sign-form{
+  }
+}
+@media screen and (min-width:1024px){
+    .sign-form{
+    }
 }
 .sign-form h1 {
   color: #3dc23e;
@@ -28,7 +42,6 @@ body
   border: 1px solid #999;
   outline: none;
   font-size: 20px;
-
 
 }
 .signup-box{
@@ -43,7 +56,7 @@ body
 button{
   color: #fff;
   border-radius: 20px;
-  padding: 1%;
+  padding: 2%;
   margin: 3% 0 ;
   width: 50%;
   border: none;
@@ -157,11 +170,6 @@ img{
 .clear:hover{
   background-color: #FF8C00;
   color: #fff;
-}
-@media screen and (min-width:767px) {
-  body{
-    width: ;
-  }
 }
 .country label{
   font-size: 15px;
