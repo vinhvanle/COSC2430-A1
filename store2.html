@@ -1,53 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nav Bar</title>
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <title>Shephora</title>
     </head>
-    
     <body>
-        <div class="header">
-            <div class="logo-container">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            </div>
-            <div class="slogan-container">
-                <h3 class="slogan">Horange Mall</h3>
-            </div>
-            <div class="navbar">
-                <div class="button">
-                    <a href="index.html">Home</a>
-                    <a href="aboutus.html">About Us</a>
-                    <a href="faqs.html">FAQs</a>
-                    <a href="fees.html">Fees</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="myaccount.html">My Account</a>
-                    <div class="dropdown">
-                        <li class="dropbtn">Browse</li>
-                        <div class="dropdown-content">
+
+        <div class="grid">
+
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <div class="slogan">
+                    <p>Horange Mall</p>
+                </div>
+                <div class="nav-bar">
+                   <div class="item">
+                       <a href="index.html">Home</a>
+                   </div>
+                   <div class="item">
+                       <a href="aboutus.html">About Us</a>
+                   </div>
+                   <div class="item">
+                       <a href="fees.html">Fees</a>
+                   </div>
+                   <div class="item">
+                       <a href="contact.html">Contact</a>
+                   </div>
+                   <div class="item">
+                       <a href="faqs.html">FAQs</a>
+                   </div>
+                   <div class="item">
+                       <a href="login.html">My Account</a>
+                   </div>  
+                   <div class="dropdown">
+                       <a href="" class="dropbtn">Browse</a>
+                       <div class="dropdown-content">
                             <a href="browsebyname.html">Browse By Name</a>
                             <a href="browsebycategory.html">Browse By Category</a>
-                        </div>
-                    </div>
+                       </div>
+                   </div>                 
+                </div>                
+            </div>
+
+        <div class="content">
+            <div class="box1">
+            <h1>Sephora - Skincare Products</h1>
+            <img src="https://www.almazois.gr/wp-content/uploads/2019/11/almazois-pita-2020-dorothetes-sephora-logo.png">
+           <h2>Green Clean Makeup Removing Cleansing Balm</h2>
+           <img src="https://www.sephora.com/productimages/sku/s1899103-av-03-zoom.jpg?imwidth=315">
+           <p>price: $34.00 / 100ml </p>
+           <p>What it is: A makeup remover and face cleanser that virtually melts away all makeup, leaving skin hydrated and silky smooth</p>
+           <p>Skin Type: Normal, Dry, Combination, and Oily</p>
+           <p>Skincare Concerns: Dryness, Dullness, and Uneven Texture</p>
+           <p>Formulation: Cream</p>
+           <p>Highlighted Ingredients:
+            - Sunflower and Ginger Root Oils: Melt even stubborn makeup (including long-wear) without stripping or drying skin.
+            - Turmeric and Moringa Extract: Help remove impurities, sunscreen residue, and fight the effects of pollution.
+            - Papaya Enzymes: Naturally exfoliate pores.
+            </p>
+            <p>Suggested Usage:
+                -Scoop a generous amount with the included spatula and apply to dry skin.
+                -Use your fingertips to massage into skin with gentle upward and outward circular motions, focusing on areas that need attention (like eye makeup).
+                -Splash with water or wipe off with a warm, damp washcloth
+                </p>
+            <h2>Life Liner Double Ended Eyeliner Liquid & Pencil</h2>
+            <img src="https://i.pinimg.com/736x/af/18/a4/af18a4941fb29d9da1b23943a70f3136.jpg">
+            <p>Price: $12.00</p>
+            <p>What it is: An ultimate life-proof, dual-ended liquid and pencil eyeliner that is long-lasting, waterproof, smudge-proof, and fade-proof</p>
+            <p>What Else You Need to Know: The liquid liner formula glides on smoothly and quickly dries to a black matte finish, which stays put for up to 48 hours. 
+                The unique pencil formula offers perfect balance between a creamy, easy glide and structured application, giving you enough playtime and precision to complete your look</p>
+            <p>How to use: -Open the liquid side of the liner and wipe off excess formula from the brush.
+                -Starting from the outer corner of the eye create a wing, and then work inwards towards the center of the lid. Then complete the line starting from the inner corner of tbe eyes.
+                -Allow to dry for approximately 60 seconds, depending on how thick the line is, the thicker the liner is the longer it will take to dry.
+                </p>
+            <h2>No Limit Dry Volume and Thickening Spray</h2>
+            <img src="https://www.sephora.com/productimages/sku/s2462935-av-05-zoom.jpg?imwidth=315">
+            <p>Price: $31.00</p>
+            <p>Hair Concerns:
+                - Hold
+                - Thinning
+                - Volumizing
+                </p>
+            <p>Key Benefits:
+                - Quickly delivers volume and thickness
+                - Touchable, buildable formula
+                - Creates flexible, lasting styles
+                </p>
+            <p>How to use: Spray onto dry, styled hair.
+                -Focus from roots to ends.
+                -Build for more body, density, and hold
+                </p>
+            <h2>Polypeptide Moisturizer</h2>
+            <img src="https://www.sephora.com/productimages/sku/s2025633-av-03-zoom.jpg?imwidth=315">
+            <p>$68.00 / 50ml</p>
+            <p>What it is: A protein moisturizer that combines signal peptides, growth factors, amino acids, and pygmy waterlily to visibly improve skin‘s tone, texture, and firmness.</p>
+            <p>Skin Type: Normal, Dry, Combination, and Oily</p>
+            <p>Skincare Concerns: Dryness, Dullness and Uneven Texture, and Loss of Firmness and Elasticity</p>
+            <p>How to use: -Apply morning and night to clean, dry skin for a vital dose of protein and replenishing moisture the skin needs to retain its youthful appearance</p>
+            <h2>Self Tanning Drops</h2>
+            <img src="https://www.sephora.com/productimages/sku/s2078327-av-09-zoom.jpg?imwidth=315" >
+            <p> Prices: $29.00/30ml</p>
+            <p>What it is: First of its kind, color-correcting self-tan drops that you mix with your favorite moisturizer for a custom glow</p>
+            <p>Skin Type: Normal, Dry, Combination, and Oily</p>
+            <p>Skincare Concerns: Dark Spots, Dryness, and Dullness</p>
+            <p>How to use: Add two to 12 drops to your favorite moisturizer, mix together, and apply to skin.
+                -Wash hands after use.
+                -Tan develops in four to six hours.
+                -More drops equals more glow: Use two to four drops for a sunkissed look; four to eight drops for a golden look; and eight to 12 drops for a bronzed look
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+                <div class="copyrights">
+                    <a href="copyrights.html"><span>&copy;</span>Horange. All Rights Reserved</a>
+                </div>
+                <div class="tos">                    
+                    <a href="tos.html">Terms of Service</a>
+                </div>
+                <div class="privacy">
+                    <a href="privacy.html">Privacy Policies</a>
                 </div>
             </div>
+            
         </div>
-        <main>
-           main content goes here
-        </main>
-        <footer>
-            <div class="copyrights">
-                <a href="copyrights.html">2021 Horange. All Rights Reserved</a>            
-            </div>       
-            <div class="tos">
-                <a href="tos.html">Terms of Service</a>
-            </div>
-            <div class="privacy">
-                <a href="privacy.html">Privacy Policies</a>
-            </div>
-        </footer>
+
     </body>
 </html>
