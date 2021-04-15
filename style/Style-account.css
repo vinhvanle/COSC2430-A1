@@ -8,37 +8,23 @@ body
   background-color: #FF8C00;
 }
 .sign-form{
-<<<<<<< Updated upstream
-=======
-  height: 70%;
->>>>>>> Stashed changes
   width: 30%;
   border-radius: 20px;
   background: #fff;
   text-align: center;
-<<<<<<< Updated upstream
-  margin: 35%;
-=======
   margin-left: 35%;
   margin-top:5%;
   margin-bottom: 5%;
 
->>>>>>> Stashed changes
 }
 .sign-form h1 {
   color: #3dc23e;
 }
 .signin-box{
   border-radius: 20px;
-<<<<<<< Updated upstream
   margin: 5%;
   padding: 5%;
   width: 60%;
-=======
-  margin: 2%;
-  padding :3%;
-  width: 80%;
->>>>>>> Stashed changes
   border: 1px solid #999;
   outline: none;
   font-size: 20px;
@@ -172,8 +158,6 @@ img{
   background-color: #FF8C00;
   color: #fff;
 }
-<<<<<<< Updated upstream
-=======
 @media screen and (min-width:767px) {
   body{
     width: ;
@@ -187,4 +171,3 @@ img{
 .form-wrap h6{
   font-size: 15px;
 }
->>>>>>> Stashed changes
