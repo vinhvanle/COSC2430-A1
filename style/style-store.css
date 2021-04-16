@@ -18,6 +18,7 @@
 }
 .store-logo{
     grid-area: logo;
+    
 }
 .store-name{
     grid-area: name;
@@ -89,7 +90,6 @@
 .store-dropdown{
     float: left;
   }
-
   .store-dropdown-content{
     display: none;
     position: absolute;
@@ -124,13 +124,10 @@
     text-align: center;
 
   }
-
-
-
   .store-dropdown a{
     text-decoration: none;
     color:white;
-    font-size: 18px;
+    font-size:18px;
   }
 
   .store-dropdown a:hover{
@@ -185,7 +182,6 @@
   .store-content .products img{
     width: 50%;
   }
-
 /* Footer style */
 
 .store-footer{
@@ -194,7 +190,6 @@
     grid-template-rows: 1fr;
     grid-template-areas:
     "copyright tos privacy" ;
-
 
 }
 .store-copyright{
@@ -209,6 +204,6 @@
 
 .store-copyright a, .store-tos a, .store-privacy a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 18px;
     color: black;
 }
