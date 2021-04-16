@@ -1,0 +1,90 @@
+/* Main Style */
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "box1 box1 box1"
+    "box2 box2 box2"
+    "box3 box3 box3"
+    "box4 box4 box4";
+    place-items: center;
+  
+  
+  }
+  .box1, .box2, .box3, .box4{
+    grid-area: box1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-areas: 
+    ". tittle ."
+    "gallery gallery gallery";
+    place-items: center;
+    place-content: center;
+    padding: 10px;
+  }
+  .tittle{
+    grid-area: tittle;
+    text-align: center;
+  }
+  .tittle .feature{
+    padding: 5px;
+  }
+  
+  .gallery{
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(3 ,minmax(100px, 400px));
+    grid-template-rows: 1fr;
+    place-items: center;
+    place-content: center;
+    border-top: 1px solid black;
+    
+  
+  }
+  
+  .gallery .item1 img,.gallery .item2 img,.gallery .item3 img{
+    width: 70%;
+    padding: 10px;
+    
+  }
+  .gallery .name{
+    text-align: left;
+    padding: 5px;
+  }
+  
+  /* .name{
+    grid-area: name;
+    place-content: center;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "name1 name2 name3";
+  }
+  .name1{
+    grid-area: name1;
+  }
+  .name2{
+    grid-area: name2;
+  }
+  .name3{
+    grid-area: name3;
+  } */
+  
+  
+  .box2{
+    
+    grid-area: box2;
+  }
+  .box3{
+    
+    grid-area: box3;
+  }
+  .box4{
+    
+    grid-area: box4;
+  }
