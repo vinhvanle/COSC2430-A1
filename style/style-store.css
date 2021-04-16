@@ -9,7 +9,7 @@ main{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
-    background-color: coral;
+    
 }
 
 /* Header style */
@@ -83,6 +83,66 @@ main{
     border-radius: 10px;
     
 }
+
+.store-product{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: fr;
+    grid-gap: 20px;
+  }
+
+.store-dropdown{
+    float: left;
+  }
+  
+  .store-dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .store-dropdown-content a{
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .store-dropdown-content a:hover{
+    background-color: #ddd;
+  }
+  
+  .store-dropdown:hover .store-dropdown-content{
+    display: block;
+  }
+  
+  .store-dropdown{
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  }
+  
+  
+  
+  .store-dropdown a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+  }
+  
+  .store-dropdown a:hover{
+    color: red;
+    cursor: pointer;
+  }
+  
 .store-contact{
     grid-area: storecontact;
     padding: 5px;
@@ -94,7 +154,7 @@ main{
 
 .mall-home a, .store-home a, .store-aboutus a, .store-product a, .store-contact a{
     text-decoration: none;
-    font-size: 10px;
+    font-size: 18px;
     color: black;
     padding: 5px;
 
@@ -132,7 +192,7 @@ main{
     grid-template-rows: 1fr;
     grid-template-areas:
     "copyright tos privacy" ;
-    background-color: cyan;
+    
     
 }
 .store-copyright{
