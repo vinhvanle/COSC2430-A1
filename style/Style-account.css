@@ -15,8 +15,8 @@ body
   background: #fff;
   text-align: center;
   margin-left : 25%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 @media screen and (max-width:767px){
   .sign-form{
@@ -77,7 +77,8 @@ button{
   text-decoration: none;
   color: #3dc23e;
   display: block;
-  font-size: 25px;
+  font-size: 20px;
+
 }
 .und:hover{
   background: #fff;
@@ -85,6 +86,7 @@ button{
 }
 hr{
   width: 70%;
+  margin-left: 15%;
 }
 img{
   width:40%;
