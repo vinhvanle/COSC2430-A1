@@ -1,53 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nav Bar</title>
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style-header-footer.css">
+        <title>Horange Home Page</title>
     </head>
-    
     <body>
-        <div class="header">
-            <div class="logo-container">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            </div>
-            <div class="slogan-container">
-                <h3 class="slogan">Horange Mall</h3>
-            </div>
-            <div class="navbar">
-                <div class="button">
-                    <a href="index.html">Home</a>
-                    <a href="aboutus.html">About Us</a>
-                    <a href="faqs.html">FAQs</a>
-                    <a href="fees.html">Fees</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="myaccount.html">My Account</a>
-                    <div class="dropdown">
-                        <li class="dropbtn">Browse</li>
-                        <div class="dropdown-content">
+
+        <div class="grid">
+
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <div class="slogan">
+                    <p>Horange Mall</p>
+                </div>
+                <div class="nav-bar">
+                   <div class="item">
+                       <a href="index.html">Home</a>
+                   </div>
+                   <div class="item">
+                       <a href="aboutus.html">About Us</a>
+                   </div>
+                   <div class="item">
+                       <a href="fees.html">Fees</a>
+                   </div>
+                   <div class="item">
+                       <a href="contact.html">Contact</a>
+                   </div>
+                   <div class="item">
+                       <a href="faqs.html">FAQs</a>
+                   </div>
+                   <div class="item">
+                       <a href="login.html">My Account</a>
+                   </div>  
+                   <div class="dropdown">
+                       <a href="" class="dropbtn">Browse</a>
+                       <div class="dropdown-content">
                             <a href="browsebyname.html">Browse By Name</a>
                             <a href="browsebycategory.html">Browse By Category</a>
-                        </div>
-                    </div>
+                       </div>
+                   </div>                 
+                </div>                
+            </div>
+
+        <div class="content">
+            <h1>GUCCI</h1>
+            <p> <img src="data:image/png;base64,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"/p>
+           <p>
+           </p>
+           <h2>Ophidia soft GG Supreme large tote </h2>
+           <p> <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1515436221/519335_9IKPT_8745_001_100_0000_Light-Ophidia-soft-GG-Supreme-large-tote.jpg"</p>
+           <p>Price: $1,800</p>
+           <p>Product Details</p>
+            <p>Style ‎519335 9IKPT 8745</p>
+            <p>First used in the 1970s, the GG logo was an evolution of the original Gucci rhombi design from the 1930s, and from then it's been an established symbol of Gucci's heritage. This large tote combines the signature motif with the Web stripe—a timeless pairing that pays homage to Gucci's roots. Thanks to its long leather handles, the style can also be carried as a shoulder bag.</p>
+            <p>.Beige/ebony soft GG Supreme, crafted from a coated microfiber fabric, with brown leather trim
+            </p>
+            <p>.Green and red Web</p>
+            <p>.Antique gold-toned hardware</p>
+            <p>.Double G</p>
+            <p>.Detachable pouch with zipper closure</p>
+            <p>.Double leather handles with 11" drop</p>
+            <p>.Large size: 16"W x 17"H x 2"D
+            </p>
+            <p>.Microfiber lining with a suede-like finish
+            </p>
+            
+            <h2>GG Multicolor large tote bag</h2>
+            <p> <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1612460710/659980_2U1BN_4198_001_092_0000_Light-GG-Multicolor-large-tote-bag.jpg"</p>
+            <p>Price: $1,980</p>
+            <p>Product Details</p>
+            <p>Style ‎659980 2U1BN 4198</p>
+            <p>Embracing the new possibilities that lie within variations of the Gucci archives, various pieces throughout the collection provide a new lens through which to view the emblematic GG rhombi motif. Already an evolution of the House logo, it is once again reimagined in a series of bright colors—a theme that has become synonymous with the Creative Director’s vision. This large tote bag is part of the GG Multicolor collection.
+            </p>
+            <p>.GG Multicolor canvas</p>
+            <p>.Blue leather trim</p>
+            <p>.Leather Interlocking G tag
+            </p>
+            <p>.Interior: 2 zip pockets</p>
+            <p>.Top handle with 8cm drop</p>
+            <p>.Shoulder strap with 37cm drop</p>
+            <p>.Large size: W43cm x. L34cm x D18.5cm
+            </p>
+
+
+            <h2>Gucci Off The Grid long tote bag</h2>
+            <p> <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1584468006/630355_H9HAN_1000_001_068_0000_Light-Gucci-Off-The-Grid-long-tote-bag.jpg"</p>
+            <p>Price: $1,690</p>
+            <p>Product Details</p>
+            <p>Style ‎630355 H9HAN 1000
+            </p>
+            <p>A line of accessories and ready-to-wear is presented for Pre-Fall 2020 made from recycled materials and trims, supporting the House's commitment to sustainability. Gucci Off The Grid is the first collection from Gucci Circular Lines—a concept created to support the House's vision for circular production. Designed for those mindful of their environmental impact, Gucci Off The Grid uses recycled, organic, bio-based and sustainably sourced materials. Regenerated nylon, crafted using recycled sewing thread and trims displays the GG pattern against an opaque background in black. Crafted into a long double handled tote bag, the shape is finished with an optional shoulder strap that can be detached on one side and stored within the bag.
+            </p>
+            <p>.Black GG nylon made from ECONYL®—a nylon fabric sourced from regenerated materials that can be recycled and recreated, aiding in decreasing its ecological footprint
+            </p>
+            <p>.Black leather trims made from leather tanned through an alternative metal or chrome free tanning process, reducing the environmental footprint compared to traditional methods
+            </p>
+            <p>.Palladium-toned metal hardware made from recycled brass alloys with nickel-free finishes
+            </p>
+            <p>.Ribbon trims made from recycled materials</p>
+            <p>.Sewn using recycled polyester thread</p>
+            <p>.Regenerated nylon lining</p>
+            <p>.This item will come with a FSC-certified recycled gift box, shipped flat, and recycled nylon flannel dust bag. Each Gucci Off The Grid product will ship with a dedicated booklet detailing the collection, printed on FSC-certified recycled paper.</p>
+            <p>.Leather detail with Gucci script logo</p>
+            <p>.Interior: 2 zip pockets</p>
+            <p>.Leather top handles with 3.2" drop; Adjustable leather shoulder strap with 14.6" drop can be detached on one side and tucked into bag</p>
+            <p>.Metal hook closure</p>
+            <p>.14.8"W x 14.6"H x 5.1"D</p>
+            <p>.Weight: 2.2lbs
+            </p>
+
+
+            <h2>Ophidia GG toiletry case</h2>
+            <p> <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1566918908/598234_96IWT_8745_001_100_0000_Light-Ophidia-GG-toiletry-case.jpg"</p>
+            <p>Price: $720</p>
+            <p>Product Details</p>
+            <p>Style ‎598234 96IWT 8745
+            </p>
+            <p>The zipped pouch is presented in GG Supreme canvas trimmed with the green and red Web stripe and Double G hardware—a classic combination of the House's most recognizable elements that defines the line. The world of Ophidia continues to evolve, incorporating new shapes and silhouettes for Cruise 2020.
+            </p>
+            <p>.Beige/ebony GG Supreme canvas, a material with low environmental impact, with brown leather trim
+            </p>
+            <p>.Green and red Web</p>
+            <p>.Antique gold-toned hardware</p>
+            <p>.Double G</p>
+            <p>.Interior zipper pocket</p>
+            <p>.Zipper closure</p>
+            <p>.11.2"W x 7"H x 3.5"D</p>
+            <p>.Moiré and cotton linen lining</p>
+            <p>.Made in Italy
+            </p>
+
+
+            <h2>Exclusive Ken Scott print GG card case wallet</h2>
+            <p> <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1600715703/466492_UAIDE_1056_001_080_0000_Light-Online-Exclusive-Ken-Scott-print-GG-card-case-wallet.jpg"</p>
+            <p>Price: $560</p>
+            <p>Product Details</p>
+            <p>Style ‎466492 UAIDE 1056
+            </p>
+            <p>A bright botanical print by Ken Scott animates this card case wallet with a chevron matelassé design. Nicknamed the ‘Fashion Gardener,’ Ken Scott was an American designer who lived in Milan in the ‘60s and ‘70s and whose colorful floral drawings were reflective of his eclectic personality.
+            </p>
+            <p>.Online Exclusive with print taken from Ken Scott archives</p>
+            <p>.Black chevron matelassé leather with floral print by Ken Scott - Ken Scott is brand of Mantero
+            </p>
+            <p>.Antique gold-toned hardware</p>
+            <p>.Viscose lining</p>
+            <p>.Snap closure</p>
+            <p>.Interior open pocket</p>
+            <p>.Closed: 4.5"W x 3.5"H x 1"D</p>
+            <p>.Open: 4.5”W x 7”H</p>
+            <p>.Made in Italy</p>
+        </div>
+
+        <div class="footer">
+                <div class="copyrights">
+                    <a href="copyrights.html"><span>&copy;</span>Horange. All Rights Reserved</a>
+                </div>
+                <div class="tos">                    
+                    <a href="tos.html">Terms of Service</a>
+                </div>
+                <div class="privacy">
+                    <a href="privacy.html">Privacy Policies</a>
                 </div>
             </div>
+            
         </div>
-        <main>
-           main content goes here
-        </main>
-        <footer>
-            <div class="copyrights">
-                <a href="copyrights.html">2021 Horange. All Rights Reserved</a>            
-            </div>       
-            <div class="tos">
-                <a href="tos.html">Terms of Service</a>
-            </div>
-            <div class="privacy">
-                <a href="privacy.html">Privacy Policies</a>
-            </div>
-        </footer>
+
     </body>
 </html>

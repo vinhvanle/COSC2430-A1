@@ -68,11 +68,12 @@ padding: 5px;
 right: 5px;
 
 }
+
 .navbar {
 overflow: hidden;
 width: 75%;
 float: left;
-  {
+}
 
 .navbar a {
 float: left;
