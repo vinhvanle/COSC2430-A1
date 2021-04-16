@@ -1,0 +1,160 @@
+//* global style */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/* header style */
+.header{
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: 10% 15% 75%;
+  padding: 10px;
+  column-gap: 10px;
+}
+/* .logo{
+  background-color: green;
+} */
+
+.logo img{
+  width: 90%;
+  height: auto;
+  padding: 5px;
+}
+
+
+
+.slogan p{
+  font-size: 22px;
+  text-align: left;
+  font-family: 'Zen Dots', cursive;
+  color: coral;
+}
+
+.nav-bar{
+  display: grid;
+  grid-template-columns: repeat(8, 0.8fr);
+  grid-template-rows: 0.2fr;
+  grid-gap: 20px;
+}
+
+
+.dropdown{
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.item, .dropdown{
+  width: 80%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: coral;
+
+}
+
+
+
+.item a, .dropdown a{
+  text-decoration: none;
+  color:white;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.item a:hover, .dropdown a:hover{
+  color: red;
+  cursor: pointer;
+}
+
+
+@media (max-width:768px) {
+  .nav-bar{
+    grid-template-columns: repeat(3, 3fr);
+    padding: 0 40px;
+  }
+  .header .logo img{
+    display: none;
+  }
+  
+  
+}
+
+
+
+/* footer style */
+.footer{
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  padding: 20px;  
+  border-top: 1px solid black;
+}
+
+
+.copyrights a{
+  text-decoration: none;
+  color: black;
+}
+
+.copyrights a:hover{
+  color: red;
+}
+
+
+
+.tos a{
+  text-decoration: none;
+  color: black;
+}
+
+.tos a:hover{
+  color: red;
+}
+
+
+.privacy a{
+  text-decoration: none;
+  color: black;
+}
+
+.privacy a:hover{
+  color: red;
+}
+
+
+
