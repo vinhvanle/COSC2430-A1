@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.b-name{
+  width: 30%;
+  background-color:coral ;
+  margin-left:35%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-radius: 20px;
+}
+.b-name ul{
+  list-style: none;
+  text-align: center;
+  background-color: coral;
+  border-radius: 20px;
+}
+.b-name ul li{
+  display: inline-table;
+  width: 5%;
+  margin: 2%;
+}
+.b-name ul li a{
+  font-size: 40px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+h2{
+  text-align: center;
+  font-size: 40px;
+  color: coral;
+}
+h3{
+  font-size: 30px;
+  color: white;
+}
+.b-ctgr{
+  background-color:#fff ;
+  border-radius: 20px;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+.ctgr{
+  background-color: coral;
+  text-align: center;
+  width: 70%;
+  padding: 2%;
+  margin-left: 15%;
+  border-radius: 20px;
+
+}
+.ctgr select{
+  background-color: #fff;
+  margin-left: 0;
+  font-size: 20px;
+}
+.click{
+  width: 50%;
+  margin-left: 25%;
+}
+.click button{
+  background-color:#008f82;
+  text-align: center;
+  width: 50%;
+  border-radius: 20px;
+  padding: 2%;
+  border: none;
+}
+.click button:hover{
+  background-color: coral;
+  color:#fff;
+}
