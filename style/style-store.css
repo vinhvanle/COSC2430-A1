@@ -197,7 +197,7 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.2fr;
-    background-color: blanchedalmond;
+    
     place-items: center;
 }
 
@@ -208,7 +208,7 @@ main{
     grid-template-rows: 1fr;
     place-items: center;
     place-content: center;
-    background-color: brown;
+    
     place-items: center;
     padding-left: 60px;
 }
@@ -221,7 +221,7 @@ main{
     grid-area: price;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    background-color: blue;
+    
     place-items: center;
 }
 
