@@ -5,9 +5,10 @@
     padding: 0;
 }
 
+
 main{
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 2fr 0.1fr;
     grid-template-columns: 1fr;
     
 }
@@ -23,6 +24,7 @@ main{
 }
 .store-logo{
     grid-area: logo;
+    
 }
 .store-name{
     grid-area: name;
@@ -91,9 +93,7 @@ main{
     grid-gap: 20px;
   }
 
-.store-dropdown{
-    float: left;
-  }
+
   
   .store-dropdown-content{
     display: none;
@@ -130,12 +130,12 @@ main{
   
   }
   
-  
+   
   
   .store-dropdown a{
     text-decoration: none;
     color:white;
-    font-size: 18px;
+    font-size:18px;
   }
   
   .store-dropdown a:hover{
@@ -172,17 +172,65 @@ main{
 .store-content{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    background-color: crimson;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "section1 section1"
+    "section2 section2";
+    place-items: center;
 }
 
-.store-new{
-    grid-row: 1/3;
+.section1{
+    grid-area: section1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-areas:
+    "name name name name name"
+    "gallery gallery gallery gallery gallery"
+    "price price price price price";
+
+    padding: 20px;
 }
 
-.store-feature{
-    grid-row: 1/3;
+.item-name{
+    grid-area: name;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.2fr;
+    background-color: blanchedalmond;
+    place-items: center;
 }
+
+.gallery{
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(3 ,minmax(100px, 500px));
+    grid-template-rows: 1fr;
+    place-items: center;
+    place-content: center;
+    background-color: brown;
+    place-items: center;
+    padding-left: 60px;
+}
+
+.gallery img{
+    width: 70%;
+    padding: 5px;
+}
+.price{
+    grid-area: price;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: blue;
+    place-items: center;
+}
+
+
+
+.section2{
+    grid-area: section2;
+}
+
 
 /* Footer style */
 
@@ -192,6 +240,9 @@ main{
     grid-template-rows: 1fr;
     grid-template-areas:
     "copyright tos privacy" ;
+    padding: 100px;
+    border-top: 1px solid black;
+    
     
     
 }
@@ -207,6 +258,6 @@ main{
 
 .store-copyright a, .store-tos a, .store-privacy a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 18px;
     color: black;
 }
