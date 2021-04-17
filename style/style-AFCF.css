@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.content{
+  background-color: coral;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  border-radius: 20px;
+  margin-top: 5%;
+  padding: 2%;
+}
+.content p{
+  color: #fff;
+}
+.content p{
+  margin: 1%;
+}
+.box{
+  border-radius: 20px;
+  width: 70%;
+  margin-left: 15%;
+}
+.box input{
+  border-radius: 20px;
+  border: none;
+  width: 30%;
+  padding: 1%;
+}
+.content img{
+  width: 40%;
+  border-radius: 20px;
+  margin-bottom: 5%;
+}
+.content mark{
+  background-color: #fff;
+  color: coral;
+  border-radius: 20px;
+  padding: 2px;
+}
