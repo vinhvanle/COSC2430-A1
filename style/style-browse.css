@@ -73,3 +73,7 @@ h3{
   background-color: coral;
   color:#fff;
 }
+
+button a{
+  text-decoration: none;
+}
