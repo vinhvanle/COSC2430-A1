@@ -163,3 +163,17 @@
 .privacy a:hover{
   color: red;
 }
+
+.privacy, .copyrights, .tos{
+  margin: auto;
+  padding: 50px;
+  width: 80%;
+
+
+}
+
+.privacy p, .copyrights p, .tos p{
+  padding: 5px;
+  
+
+}

@@ -5,14 +5,14 @@ body
   margin:0;
   padding:0;
   background-size: cover;
-  background-color: coral;
+  background-color: #fff;
 }
 @media screen and (min-width:375px) and (max-width:1024px) {
 }
 .sign-form{
   width: 50%;
   border-radius: 20px;
-  background: #fff;
+  background: coral;
   text-align: center;
   margin-left : 25%;
   margin-top: 2%;
@@ -20,6 +20,8 @@ body
 }
 .sign-form img{
   width: 60%;
+  margin-top: 5%;
+  border-radius: 20px;
 }
 @media screen and (max-width:767px){
   .sign-form{
@@ -72,8 +74,8 @@ button{
 
 }
 .sign-button:hover{
-  background: #coral;
-  color: #fff;
+  background: #fff;
+  color: coral;
 }
 .und{
   text-decoration: none;
@@ -83,8 +85,8 @@ button{
 
 }
 .und:hover{
-  background: #fff;
-  color: #coral;
+  background: coral;
+  color: #fff;
 }
 hr{
   width: 70%;
@@ -94,7 +96,8 @@ hr{
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  background: #fff;
+  background: coral;
+
 }
 .country{
   border-radius: 20px;
@@ -104,11 +107,15 @@ hr{
 
 }
 .account-type{
-  background-color: #fff;
+  background-color: coral;
   text-align: center;
   border-radius: 20px;
   margin: 15%;
 
+}
+.account-type img{
+  margin-top: 5%;
+  border-radius: 20px;
 }
 .typee{
   text-decoration: none;
@@ -141,16 +148,6 @@ hr{
   border: 1px solid #999;
   font-size: 20px;
   outline: none;
-}
-.send{
-  border-radius: 20px;
-  outline: none;
-  background-color:  #008f82;
-  margin-top: 5%;
-}
-.send:hover{
-  background-color: #coral;
-  color: #fff;
 }
 .form-container h2{
   color: #008f82;
