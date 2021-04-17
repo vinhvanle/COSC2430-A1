@@ -6,21 +6,16 @@
 }
 
 
-main{
-    display: grid;
-    grid-template-rows: 0.1fr 2fr 0.1fr;
-    grid-template-columns: 1fr;
-    
-}
 
 /* Header style */
 
 .store-header{
     display: grid;
     grid-template-rows: 0.5fr;
-    grid-template-columns: 0.2fr 0.3fr 1fr;
+    grid-template-columns: 0.3fr 0.4fr 1.5fr;
     grid-template-areas:
     "logo name navbar" ;
+    grid-gap: 10px;
 }
 .store-logo{
     grid-area: logo;
@@ -48,12 +43,13 @@ main{
 
 .store-navbar{
     display: grid;
-    grid-template-columns: repeat(5, 0.15fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr;
     grid-template-areas:
-    "mallhome storehome storeaboutus storeproduct storecontact" ;
+    "mallhome storehome storeaboutus storecontact storeproduct" ;
     padding: 10px;
     
+
 
 }
 
@@ -62,39 +58,62 @@ main{
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
-    
+    background-color: coral;
+
 }
 .store-home{
     grid-area: storehome;
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
-    
+    background-color: coral;
+
 }
 .store-aboutus{
     grid-area: storeaboutus;
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
-    
+    background-color: coral;
+
 }
 .store-product{
     grid-area: storeproduct;
     padding: 5px;
-    border: 1px solid black;
     border-radius: 10px;
-    
+    background-color: coral;
+    border: 1px solid black;
+
+
 }
+.store-contact{
+  grid-area: storecontact;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: coral;
+
+}
+
+
 
 .store-product{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: fr;
-    grid-gap: 20px;
+    grid-template-rows: 1fr;
+    
+    /* grid-gap: 20px; */
   }
-
-
+.store-dropbtn{
+  font-size: inherit;  
+  padding: 5px;
+  font-size: 18px;
   
+}
+.store-dropdown{
+    float: left;
+    
+  }
   .store-dropdown-content{
     display: none;
     position: absolute;
@@ -102,8 +121,10 @@ main{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 10px;
+    
   }
-  
+
   .store-dropdown-content a{
     float: none;
     padding: 12px 16px;
@@ -111,15 +132,15 @@ main{
     display: block;
     text-align: center;
   }
-  
+
   .store-dropdown-content a:hover{
     background-color: #ddd;
   }
-  
+
   .store-dropdown:hover .store-dropdown-content{
     display: block;
   }
-  
+
   .store-dropdown{
     text-align: center;
     padding: 5px;
@@ -127,29 +148,20 @@ main{
     justify-content: center;
     align-items: center;
     text-align: center;
-  
+
   }
-  
-   
-  
   .store-dropdown a{
     text-decoration: none;
     color:white;
     font-size:18px;
   }
-  
+
   .store-dropdown a:hover{
     color: red;
     cursor: pointer;
   }
-  
-.store-contact{
-    grid-area: storecontact;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 10px;
-    
-}
+
+
 
 
 .mall-home a, .store-home a, .store-aboutus a, .store-product a, .store-contact a{
@@ -163,88 +175,83 @@ main{
 .mall-home:hover, .store-home:hover, .store-aboutus:hover, .store-product:hover, .store-contact:hover{
     background-color: khaki;
     cursor: pointer;
-    
+
 
 }
 
 /* Content style */
 
 .store-content{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "section1 section1"
-    "section2 section2";
-    place-items: center;
-}
-
-.section1{
-    grid-area: section1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
-    grid-template-areas:
-    "name name name name name"
-    "gallery gallery gallery gallery gallery"
-    "price price price price price";
-
-    padding: 20px;
-}
-
-.item-name{
-    grid-area: name;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.2fr;
-    
-    place-items: center;
-}
-
-.gallery{
-    grid-area: gallery;
-    display: grid;
-    grid-template-columns: repeat(3 ,minmax(100px, 500px));
-    grid-template-rows: 1fr;
-    place-items: center;
-    place-content: center;
-    
-    place-items: center;
-    padding-left: 60px;
-}
-
-.gallery img{
+    background-color: coral;
     width: 70%;
-    padding: 5px;
-}
-.price{
-    grid-area: price;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    border-radius: 20px;
+    text-align: center;
+    margin-left : 15%;
+    /* margin-top: 15%; */
+    margin-bottom: 15%;
     
-    place-items: center;
+}
+.featured-product{
+  border-top: 1px solid black;
+  border-radius: 20px;
+}
+.item1, .item2, .item3{
+  padding: 10px;
+  
+}
+.section1, .section2{
+  border-top: 1px solid black;
+  
+}
+.section-tittle{
+  padding: 10px;
+}
+
+.item{
+  border-top: 1px solid black;
+}
+
+.featured-product{
+  text-align: center;
+}
+
+.featured-product .item-photo{
+  margin: auto;
+   
+  
+}
+
+.featured-product .item-photo img{
+  max-width: 20%;
+  max-height: 20%;
+  margin: 5px;
+  background-color: white; 
 }
 
 
-
-.section2{
-    grid-area: section2;
+.store-content .brand-logo img{
+    width: 40%;
+    border-radius: 20px;
 }
-
-
+.store-content h2{
+    margin: 1%;
+}
+.store-content p{
+}
+.store-content .products img{
+    width: 50%;
+}
 /* Footer style */
 
 .store-footer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-    "copyright tos privacy" ;
-    padding: 100px;
-    border-top: 1px solid black;
-    
-    
-    
+    ". copyright . tos . privacy"
+    ". . . . . .";
+    padding-bottom: 50px;
+
 }
 .store-copyright{
     grid-area: copyright

@@ -5,7 +5,7 @@ body
   margin:0;
   padding:0;
   background-size: cover;
-  background-color: #FF8C00;
+  background-color: coral;
 }
 @media screen and (min-width:375px) and (max-width:1024px) {
 }
@@ -15,8 +15,8 @@ body
   background: #fff;
   text-align: center;
   margin-left : 25%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 10%;
 }
 @media screen and (max-width:767px){
   .sign-form{
@@ -34,7 +34,7 @@ body
     }
 }
 .sign-form h1 {
-  color: #3dc23e;
+  color: #008f82e;
 }
 .signin-box{
   border-radius: 20px;
@@ -43,7 +43,6 @@ body
   border: 1px solid #999;
   outline: none;
   font-size: 20px;
-
 }
 .signup-box{
   border-radius: 20px;
@@ -66,28 +65,27 @@ button{
   font-size: 20px;
 }
 .sign-button{
-  background-color: #3dc23e;
+  background-color: #008f82;
 
 }
 .sign-button:hover{
-  background: #FF8C00;
+  background: #coral;
   color: #fff;
 }
 .und{
   text-decoration: none;
-  color: #3dc23e;
+  color: #008f82;
   display: block;
-  font-size: 25px;
+  font-size: 20px;
+
 }
 .und:hover{
   background: #fff;
-  color: #FF8C00;
+  color: #coral;
 }
 hr{
   width: 70%;
-}
-img{
-  width:40%;
+  margin-left: 15%;
 }
 .inner-box{
   width: 80%;
@@ -117,20 +115,20 @@ img{
   border-radius: 20px;
   margin-left: 5%;
   width: 30%;
-  background-color: #3dc23e;
+  background-color: #008f82;
 }
 .account-type .type .owner:hover{
-  background-color: #FF8C00;
+  background-color: coral;
   color: #fff;
 }
 .account-type .type .shopper{
   border-radius: 20px;
   margin-right: 5%;
   width: 30%;
-  background-color: #3dc23e;
+  background-color: #008f82;
 }
 .account-type .type .shopper:hover{
-  background-color: #FF8C00;
+  background-color: coral;
   color: #fff;
 }
 .fg-box {
@@ -144,18 +142,18 @@ img{
 .send{
   border-radius: 20px;
   outline: none;
-  background-color:  #3dc23e;
+  background-color:  #008f82;
   margin-top: 5%;
 }
 .send:hover{
-  background-color: #FF8C00;
+  background-color: #coral;
   color: #fff;
 }
 .form-container h2{
-  color: #3dc23e;
+  color: #008f82;
 }
 .sign-form img{
-  width: 90%;
+  width: 60%;
 }
 .country select{
   font-size: 15px;
@@ -166,10 +164,10 @@ img{
 }
 .clear{
   width: 50%;
-  background-color: #3dc23e;
+  background-color: #008f82;
 }
 .clear:hover{
-  background-color: #FF8C00;
+  background-color: #coral;
   color: #fff;
 }
 .country label{
@@ -179,4 +177,6 @@ img{
 }
 .form-wrap h6{
   font-size: 15px;
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
