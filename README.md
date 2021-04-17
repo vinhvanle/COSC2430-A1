@@ -41,3 +41,7 @@ Contact:s3804620@rmit.edu.vn
 
 ***GitHub Repo***
 https://github.com/vinhvanle/COSC2430-A1
+
+***Published Website***
+
+https://vinhvanle.github.io/Horange/
