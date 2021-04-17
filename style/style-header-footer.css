@@ -72,6 +72,11 @@
   background-color: grey;
   color: #fff;
 }
+.dropdown-content a:hover:hover{
+  color: coral;
+}
+
+
 
 .dropdown:hover .dropdown-content{
   display: block;
