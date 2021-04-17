@@ -18,6 +18,9 @@ body
   margin-top: 2%;
   margin-bottom: 10%;
 }
+.sign-form img{
+  width: 60%;
+}
 @media screen and (max-width:767px){
   .sign-form{
     margin-top: 40%;
@@ -151,9 +154,6 @@ hr{
 }
 .form-container h2{
   color: #008f82;
-}
-.sign-form img{
-  width: 60%;
 }
 .country select{
   font-size: 15px;
