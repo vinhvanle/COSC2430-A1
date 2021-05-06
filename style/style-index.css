@@ -1,4 +1,7 @@
 /* Main Style */
+*{
+  margin: 0;
+}
 
 main{
     display: grid;
@@ -70,3 +73,56 @@ main{
 
     grid-area: box4;
   }
+
+
+.button{
+  background-color: coral;
+  padding: 1em 2em;
+  color: aliceblue;
+  border: 0;
+}
+
+.button:hover{
+  background: #333;
+
+}
+
+.cookie-container{
+  position: fixed;
+  text-align: center;
+  bottom: -100%; 
+  left: 0;
+  right: 0;
+  padding: 2rem;  
+  background-color: coral;
+  transition: 400ms;
+}
+.cookie-container.active {
+  bottom: 0;
+}
+.cookie-container p{
+  font-size: 32px;
+}
+
+.cookie-container a{
+  font-size: 32px;
+  color: black;
+}
+
+.cookie-btn{
+  background-color: #f3f3f3;
+  color: coral;
+  cursor: pointer;
+  padding: 5px 20px;
+  font-size: 32px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+
+}
+
+
+
+
+
+  
