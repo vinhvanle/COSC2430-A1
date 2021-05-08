@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="../style/style-AFCF.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        
+        <script src="contact.js"></script>
+
+       
+        
         <title>Contact</title>
     </head>
     <body>
@@ -46,8 +51,6 @@
                             <a href="../sub/browsebycategory.html">Browse By Category</a>
                        </div>
                    </div>
-                   <div class="item">
-                    <a href="shopping-cart.html">Shopping cart</a> 
                 </div>
             </div>
 
@@ -62,7 +65,9 @@
                  <p>Phone: 0987654321</p>
                  <p>Email: horange.mall@gmail.com</p>
              </div>
-             <div class="contact-form">
+
+
+                <form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
                  <h1> If you want to contact to the Mall Owner, please fill this form:</h1>
                  <form method="get" action="index.html">
                   <p> Purpose of Contact
@@ -72,19 +77,29 @@
                       <option value='personal'>PERSONAL</option>
                     </select>
                   </p>
+
+
+
                   <br>
-                  <div class="box"> <label for="">Name</label>
-                    <input type="text" name="Name" maxlength="50">
-                    <br>
-                    <br>
-                     <label for="">Email</label>
-                    <input type="email" name="Email">
-                    <br>
-                    <br>
-                     <label for="">Phone number</label>
-                    <input type="number" name="phone number">
-                  </div>
-                  <br>
+                
+                  <div class="row">
+                    <label>Full Name</label>
+                    <input type="text" name="name">
+                    <div class="error" id="nameErr"></div>
+                </div>
+                <div class="row">
+                    <label>Email Address</label>
+                    <input type="text" name="email">
+                    <div class="error" id="emailErr"></div>
+                </div>
+                <div class="row">
+                    <label>Mobile Number</label>
+                    <input type="text" name="mobile" minlength="9">
+                    <div class="error" id="mobileErr"></div>
+                </div>
+                
+
+
                   <div> Preferred contact
                     <input type=radio name="preferred contact"> <label for="preferred contact">Phone</label>
                     <input type=radio name="preferred contact"> <label for="preferred contact">Email</label>
@@ -99,19 +114,25 @@
                     <input type="checkbox"name='sat' value="saturday"/><label for='sat'>saturday</label>
                     <input type="checkbox"name='sun' value="sunday"/><label for='sun'>Sunday</label>
                   </div>
-                  <div> Message
-                      <textarea cols='80' rows='9'>
-                      </textarea>
-                    </div>
+                  <div class="row">
+                    <label>Message</label>
+                    <input type="text" name="message" >
+                    <div class="error" id="messErr"></div>
+                  </div>
 
-                    <div>
-                      <input type="reset" value="Clear">
-                      <input type="submit" value = "Send">
+                    <hr/>
+                    <div class="row">
+                        <input type="reset" value="Clear">
+                        <input type="submit" value="Submit">
                     </div>
-                    <div>
-             </div>
-           </div>
-           </div>
+                
+                </form>
+                
+
+                    
+             
+            </div>
+          
            <br>
            <div class="footer">
             <div class="copyrights">
@@ -126,11 +147,4 @@
         </div>
 
 </body>
-<div class="cookie-container">
-    <p>We use cookies in this website to give you the best experience. Please accept our <a href="https://gdpr-info.eu/"> Terms and conddition</a> before using our site .</p>
-    <button class="cookie-btn">
-        Agree
-    </button>
-</div>
-<script src="../jvs/cookies.js"></script>
 </html>
