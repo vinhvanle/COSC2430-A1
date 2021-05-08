@@ -43,34 +43,75 @@
                     <a href="../sub/browsebycategory.html">Browse By Category</a>
                </div>
            </div>
-           <div class="item">
-            <a href="shopping-cart.html">Shopping cart</a> 
         </div>
     </div>
   </div>
     <div class="sign-form">
       <img src="../img/logo.png" alt="logo">
       <div class="inner-box">
-        <form class="su-box" action="login.html" method="post">
           <h1>Sign Up </h1>
-          <input type="text" placeholder="Your first name" class ="signup-box" required>
+          <input type="text" id="fname" placeholder="Your first name" class ="signup-box">
           <br>
-          <input type="text" placeholder="Your last name" class ="signup-box" required>
+        <span id="fname-error" class = "error"></span>
+
+          <input type="text" id="lname" placeholder="Your last name" class ="signup-box" >
           <br>
-          <input type="email" placeholder="Your email adress" class ="signup-box"  required>
+        <span id="lname-error" class = "error"></span>
+
+          <input type="email" id="email" placeholder="Your email adress" class ="signup-box">
+
           <br>
-          <input type="tel" placeholder="Your phone number" class ="signup-box" pattern="[0-9]{10}" required>
+        <span id="email-error" class = "error"></span>
+                  <br>
+
+          <input type="tel" id="phone" placeholder="Your phone number" class ="signup-box" pattern="[0-9]{10}">
           <br>
-          <input type="password" placeholder="Your password" class ="signup-box" required>
+        <span id="phone-error" class = "error"></span>
+
+          <div id="password_div" class = "password_element">
+          <input type="password" placeholder="Your password" class ="signup-box" id = "password-field">
           <br>
-          <input type="password" placeholder="Confirm password" class ="signup-box" required>
+          <span id="password-error" class = "error"></span>
+          <div class="toggle-password">
+            <i class="fa fa-eye"></i>
+            <i class="fa fa-eye-slash"></i>
+          </div>
+          <div class="password-policies">
+        <div class="policy-length">
+          8-20 characters
+        </div>
+        <div class="policy-number">
+          Contains Number
+        </div>
+        <div class="policy-uppercase">
+          Contains Uppercase
+        </div>
+        <div class="policy-lowercase">
+          Contains Lowercase
+        </div>
+        <div class="policy-special">
+          Contains Special Characters
+        </div>
+      </div>
+        </div>
+
+
+          <input type="password" id="password_confirm" placeholder="Confirm password" class ="signup-box">
           <br>
-          <input type="text" placeholder="Your address" class="signup-box"required>
+          <span id="passwordconfirm-error" class = "error"></span>
+
+          <input type="text" id="address" placeholder="Your address" class="signup-box">
           <br>
-          <input type="text" placeholder="Your city" class="signup-box"required>
+        <span id="address-error" class = "error"></span>
+
+          <input type="text" id="city" placeholder="Your city" class="signup-box">
           <br>
-          <input type="number" placeholder="ZIP code" class="signup-box">
+        <span id="city-error" class = "error"></span>
+
+          <input type="number" id="zip" placeholder="ZIP code" class="signup-box">
           <br>
+        <span id="zip-error" class = "error"></span>
+
           </div>
           <div class="country">
             <label for="country">Please select your country:</label>
@@ -322,11 +363,11 @@
                   <option value="ZW">Zimbabwe</option>
             </select>
             </div>
-          <button type="button"class="sign-button">Sign up</button>
+          <button onclick = 'save()' class="sign-button">Sign up
+          </button>
           <hr>
           <p><span>Already register?</span><a href="../sub/login.html"  class="und" > Sign In</a></p>
           <br>
-        </form>
       </div>
       <div class="footer">
         <div class="copyrights">
@@ -339,15 +380,7 @@
             <a href="../sub/privacy.html">Privacy Policies</a>
         </div>
     </div>
-  </div>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+  <script src="file:///C:/Users/Admin/Documents/GitHub/COSC2430-A1/scripts/register.js"></script>
   </body>
-  <div class="cookie-container">
-    <p>We use cookies in this website to give you the best experience. Please accept our <a href="https://gdpr-info.eu/"> Terms and conddition</a> before using our site .</p>
-    <button class="cookie-btn">
-        Agree
-    </button>
-</div>
-<script src="../jvs/cookies.js"></script>
-</html>
-
-  
+  </html>
