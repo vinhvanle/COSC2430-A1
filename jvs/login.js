@@ -4,8 +4,6 @@ let pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[
 let email_error = document.getElementById('email_error');
 let pass_error = document.getElementById('pass_error');
 
-email.addEventListener('textInput', email_Verify);
-password.addEventListener('textInput', password_Verify);
 
 function validated(){
 	if (!email.value.match(pattern)) {
@@ -13,23 +11,19 @@ function validated(){
 		email_error.style.display = "block";
 		email.focus();
 		return false;
+	}else{
+		email.style.border = "1px solid silver";
+		email_error.style.display = "none";
 	}
+	localStorage.setItem('email', email.value);
+
 	 if (password.value != 'password') {
 		password.style.border = "1px solid red";
 		pass_error.style.display = "block";
 		password.focus();
 		return false;
 	}
-}
-function email_Verify(){
-		if (email.value.match(pattern)) {
-		email.style.border = "1px solid silver";
-		email_error.style.display = "none";
-		return true;
-	}
-}
-function password_Verify(){
-		if (password = 'password') {
+	else{
 		password.style.border = "1px solid silver";
 		pass_error.style.display = "none";
 		return true;

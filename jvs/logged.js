@@ -1,5 +1,12 @@
 window.addEventListener('load',() =>{
-  const email = localStorage.getItem('EMAIL');
-document.getElementById('inform'). innerHTML = email;
-}
-)
+  let email = localStorage.getItem('email');
+  document.getElementById('email-display'). innerHTML = email;
+})
+function check(){
+  if(_.isEmpty(localStorage)){
+    window.location.href = "../sub/login.html";
+  }
+  else{
+    window.location.href = "../sub/logged.html";
+  }
+  }
