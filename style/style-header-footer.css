@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .grid{
@@ -32,7 +33,6 @@
 .slogan p{
   font-size: 22px;
   text-align: left;
-  font-family: 'Zen Dots', cursive;
   color: coral;
 }
 
@@ -100,7 +100,6 @@
   text-decoration: none;
   color:white;
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .item a:hover, .dropdown a:hover{
@@ -175,5 +174,38 @@
 .privacy p, .copyrights p, .tos p{
   padding: 5px;
   
+
+}
+.cookie-container{
+  position: fixed;
+  text-align: center;
+  bottom: -100%; 
+  left: 0;
+  right: 0;
+  padding: 2rem;  
+  background-color: coral;
+  transition: 400ms;
+}
+.cookie-container.active {
+  bottom: 0;
+}
+.cookie-container p{
+  font-size: 32px;
+}
+
+.cookie-container a{
+  font-size: 32px;
+  color: black;
+}
+
+.cookie-btn{
+  background-color: #f3f3f3;
+  color: coral;
+  cursor: pointer;
+  padding: 5px 20px;
+  font-size: 32px;
+  border-radius: 8px;
+  margin-top: 10px;
+
 
 }
