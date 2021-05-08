@@ -7,7 +7,7 @@ let pass_error = document.getElementById('pass_error');
 email.addEventListener('textInput', email_Verify);
 password.addEventListener('textInput', password_Verify);
 
-function validated(email, password){
+function validated(){
 	if (!email.value.match(pattern)) {
 		email.style.border = "1px solid red";
 		email_error.style.display = "block";
@@ -20,7 +20,6 @@ function validated(email, password){
 		password.focus();
 		return false;
 	}
-	localStorage.setItem('email', email.value);
 }
 function email_Verify(){
 		if (email.value.match(pattern)) {

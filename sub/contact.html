@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="../style/style-AFCF.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        
+
         <script src="contact.js"></script>
 
-       
-        
+
+
         <title>Contact</title>
     </head>
     <body>
@@ -81,26 +81,26 @@
 
 
                   <br>
-                
+
                   <div class="row">
-                    <label>Full Name</label>
-                    <input type="text" name="name">
+                    <label>Full Name   </label>
+                    <input type="text" class = "information" name="name">
                     <div class="error" id="nameErr"></div>
                 </div>
                 <div class="row">
                     <label>Email Address</label>
-                    <input type="text" name="email">
+                    <input type="text" class = "information" name="email">
                     <div class="error" id="emailErr"></div>
                 </div>
                 <div class="row">
                     <label>Mobile Number</label>
-                    <input type="text" name="mobile" minlength="9">
+                    <input type="text" class = "information" name="mobile" minlength="9">
                     <div class="error" id="mobileErr"></div>
                 </div>
-                
 
 
-                  <div> Preferred contact
+
+                  <div> Preferred contact:
                     <input type=radio name="preferred contact"> <label for="preferred contact">Phone</label>
                     <input type=radio name="preferred contact"> <label for="preferred contact">Email</label>
                   </div>
@@ -114,9 +114,11 @@
                     <input type="checkbox"name='sat' value="saturday"/><label for='sat'>saturday</label>
                     <input type="checkbox"name='sun' value="sunday"/><label for='sun'>Sunday</label>
                   </div>
+                  <br>
+                  <label>Message</label>
                   <div class="row">
-                    <label>Message</label>
-                    <input type="text" name="message" >
+
+                    <input type="text" class ="message" name="message" >
                     <div class="error" id="messErr"></div>
                   </div>
 
@@ -125,14 +127,14 @@
                         <input type="reset" value="Clear">
                         <input type="submit" value="Submit">
                     </div>
-                
-                </form>
-                
 
-                    
-             
+                </form>
+
+
+
+
             </div>
-          
+
            <br>
            <div class="footer">
             <div class="copyrights">

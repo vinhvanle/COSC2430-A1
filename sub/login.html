@@ -46,18 +46,19 @@
         </div>
     </div>
   </div>
-  <form class="sign-form" action="../sub/logged.html" id = "form" method="post" onsubmit = "return validated()"  >
+  <form class="sign-form"  id = "form" action="../sub/logged.html" method="post" onsubmit = "return validated()" >
+    <form  method = "get">
       <img src="../img/logo.png" alt="logo">
       <h1>Sign in </h1>
       <br>
-        <input type="text" id ="email" placeholder="  Your Email" class="signin-box">
+        <input type="text" name ="email" placeholder="  Your Email" class="signin-box">
         <br>
         <div id = email_error class="log-error">
           Invalid email
         </div>
         <br>
         <br>
-        <input type="password" id="password" placeholder="  Your Password" class="signin-box">
+        <input type="password" name="password" placeholder="  Your Password" class="signin-box">
         <br>
         <div id = pass_error class="log-error">
           Wrong password
@@ -86,6 +87,6 @@
         </div>
     </div>
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
-    <script src="file:///C:/Users/Admin/Documents/GitHub/COSC2430-A1/scripts/login.js"></script>
+    <script src="file:///C:/Users/Admin/Documents/GitHub/COSC2430-A1/jvs/login.js"></script>
   </body>
 </html>

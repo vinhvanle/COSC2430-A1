@@ -115,7 +115,7 @@
 
 .input {
   margin-left: 100px;
-  
+
 }
 
 
@@ -149,6 +149,9 @@ input[type="submit"] {
   color: #fff;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+
 }
 input[type="submit"]:hover {
   background: #000000;
@@ -162,8 +165,20 @@ input[type="reset"] {
   color: #fff;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+
 }
 input[type="reset"]:hover {
   background: #000000;
 }
-
+.row .information{
+  border-radius: 10px;
+  padding: 5px;
+  width: 20%;
+}
+.row .message{
+  width: 50%;
+  border-radius: 10px;
+  height: 150px;
+}

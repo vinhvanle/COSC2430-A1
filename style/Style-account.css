@@ -230,7 +230,7 @@ hr{
   display: grid;
 }
 .tick img{
-  width: 10%;
+  width: 5%;
 }
 .log-error{
   color: red;
