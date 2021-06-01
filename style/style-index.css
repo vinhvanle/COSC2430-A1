@@ -1,4 +1,7 @@
 /* Main Style */
+*{
+  margin: 0;
+}
 
 main{
     display: grid;
@@ -46,8 +49,8 @@ main{
   }
 
   .gallery .item1 img,.gallery .item2 img,.gallery .item3 img{
-    width: 70%;
-    padding: 10px;
+    max-width: 70%;    
+    padding: 5px;
 
   }
   .gallery .name{
@@ -55,25 +58,7 @@ main{
     padding: 5px;
   }
 
-  /* .name{
-    grid-area: name;
-    place-content: center;
-    place-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    "name1 name2 name3";
-  }
-  .name1{
-    grid-area: name1;
-  }
-  .name2{
-    grid-area: name2;
-  }
-  .name3{
-    grid-area: name3;
-  } */
+  
 
 
   .box2{
@@ -88,3 +73,56 @@ main{
 
     grid-area: box4;
   }
+
+
+.button{
+  background-color: coral;
+  padding: 1em 2em;
+  color: aliceblue;
+  border: 0;
+}
+
+.button:hover{
+  background: #333;
+
+}
+
+.cookie-container{
+  position: fixed;
+  text-align: center;
+  bottom: -100%; 
+  left: 0;
+  right: 0;
+  padding: 2rem;  
+  background-color: coral;
+  transition: 400ms;
+}
+.cookie-container.active {
+  bottom: 0;
+}
+.cookie-container p{
+  font-size: 32px;
+}
+
+.cookie-container a{
+  font-size: 32px;
+  color: black;
+}
+
+.cookie-btn{
+  background-color: #f3f3f3;
+  color: coral;
+  cursor: pointer;
+  padding: 5px 20px;
+  font-size: 32px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+
+}
+
+
+
+
+
+  

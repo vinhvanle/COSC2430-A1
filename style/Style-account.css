@@ -1,3 +1,4 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 body
 {
   font-family: cursive;
@@ -5,18 +6,23 @@ body
   margin:0;
   padding:0;
   background-size: cover;
-  background-color: coral;
+  background-color: #fff;
 }
 @media screen and (min-width:375px) and (max-width:1024px) {
 }
 .sign-form{
   width: 50%;
   border-radius: 20px;
-  background: #fff;
+  background: coral;
   text-align: center;
   margin-left : 25%;
   margin-top: 2%;
   margin-bottom: 10%;
+}
+.sign-form img{
+  width: 60%;
+  margin-top: 5%;
+  border-radius: 20px;
 }
 @media screen and (max-width:767px){
   .sign-form{
@@ -47,8 +53,7 @@ body
 .signup-box{
   border-radius: 20px;
   width: 80%;
-  padding: 2%;
-  margin: 1%;
+  padding: 1%;
   border: 1px solid #999;
   outline: none;
   font-size:15px;
@@ -69,8 +74,8 @@ button{
 
 }
 .sign-button:hover{
-  background: #coral;
-  color: #fff;
+  background: #fff;
+  color: coral;
 }
 .und{
   text-decoration: none;
@@ -80,8 +85,8 @@ button{
 
 }
 .und:hover{
-  background: #fff;
-  color: #coral;
+  background: coral;
+  color: #fff;
 }
 hr{
   width: 70%;
@@ -91,7 +96,8 @@ hr{
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  background: #fff;
+  background: coral;
+
 }
 .country{
   border-radius: 20px;
@@ -101,11 +107,15 @@ hr{
 
 }
 .account-type{
-  background-color: #fff;
+  background-color: coral;
   text-align: center;
   border-radius: 20px;
   margin: 15%;
 
+}
+.account-type img{
+  margin-top: 5%;
+  border-radius: 20px;
 }
 .typee{
   text-decoration: none;
@@ -139,21 +149,8 @@ hr{
   font-size: 20px;
   outline: none;
 }
-.send{
-  border-radius: 20px;
-  outline: none;
-  background-color:  #008f82;
-  margin-top: 5%;
-}
-.send:hover{
-  background-color: #coral;
-  color: #fff;
-}
 .form-container h2{
   color: #008f82;
-}
-.sign-form img{
-  width: 60%;
 }
 .country select{
   font-size: 15px;
@@ -179,4 +176,65 @@ hr{
   font-size: 15px;
   margin-top: 2%;
   margin-bottom: 5%;
+}
+.password-policies{
+  position: relative;
+  display: none;
+  font-size: 15px;
+  padding: 10px;
+  opacity: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition:  height 300ms ease-in-out,
+                    opacity 300ms ease-in-out;
+}
+.password-policies.active{
+  width: 72%;
+  display: grid;
+  background-color: white;
+  opacity: 1;
+  margin-left: 10%;
+}
+.password-policies.active > div{
+  color: #888;
+  transition: all 300ms ease-in-out;
+}
+.password-policies.active > div.active{
+  transition: all 300ms ease-in-out;
+  color: black;
+}
+.toggle-password{
+  width: 8%;
+  line-height:25px;
+  font-size:20px;
+  cursor:pointer;
+  margin-left: auto;
+  top: 50%;
+}
+.toggle-password.active i.fa-eye {
+  display:none;
+}
+.toggle-password.active i.fa-eye-slash {
+  display:inline;
+}
+.toggle-password i.fa-eye-slash {
+  display:none;
+}
+.password_element{
+}
+.error{
+  color: red;
+  font-size: 15px;
+}
+.tick{
+  display: grid;
+}
+.tick img{
+  width: 5%;
+}
+.log-error{
+  color: red;
+  font-size: 15px;
+  display: none;
+  margin: 2%;
 }

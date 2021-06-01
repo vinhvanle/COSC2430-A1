@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.content{
+  background-color: coral;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  border-radius: 20px;
+  padding: 2%;
+}
+.content p{
+  color: #fff;
+  margin: 1%;
+}
+.box{
+  border-radius: 20px;
+  width: 70%;
+  margin-left: 15%;
+}
+.box input{
+  border-radius: 20px;
+  border: none;
+  width: 30%;
+  padding: 1%;
+}
+.content img{
+  width: 40%;
+  border-radius: 20px;
+  margin-bottom: 5%;
+}
+.content mark{
+  background-color: #fff;
+  color: coral;
+  border-radius: 20px;
+  padding: 2px;
+}
+.contactForm textarea, select{
+  border-radius: 20px;
+}
+.contactForm select{
+  padding: 1%;
+  width: 30%;
+  font-size: 15px;
+
+
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+.input {
+  margin-left: 100px;
+
+}
+
+
+.input, select {
+  margin-left: 30px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row textarea {
+  border-radius: 20px;
+  height: 30px;
+}
+
+.form-inline label, .form-inline input {
+  display: inline-block;
+  width: auto;
+  padding-right: 15px;
+}
+.error {
+  color: blue;
+  font-size: 90%;
+}
+
+input[type="submit"] {
+  font-size: 110%;
+  font-weight: 100;
+  background: #7ecc00;
+  border-color: #0b2f4d;
+  box-shadow: 0 3px 0 #01060a;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+input[type="submit"]:hover {
+  background: #000000;
+}
+input[type="reset"] {
+  font-size: 110%;
+  font-weight: 100;
+  background: #7ecc00;
+  border-color: #0b2f4d;
+  box-shadow: 0 3px 0 #01060a;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+input[type="reset"]:hover {
+  background: #000000;
+}
+.row .information{
+  border-radius: 10px;
+  padding: 5px;
+  width: 20%;
+}
+.row .message{
+  width: 50%;
+  border-radius: 10px;
+  height: 150px;
+}

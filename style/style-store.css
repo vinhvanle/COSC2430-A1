@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Bebas Neue', cursive;
 }
 
 
@@ -12,9 +13,10 @@
 .store-header{
     display: grid;
     grid-template-rows: 0.5fr;
-    grid-template-columns: 0.2fr 0.3fr 1fr;
+    grid-template-columns: 0.3fr 0.4fr 1.5fr;
     grid-template-areas:
     "logo name navbar" ;
+    grid-gap: 10px;
 }
 .store-logo{
     grid-area: logo;
@@ -42,11 +44,12 @@
 
 .store-navbar{
     display: grid;
-    grid-template-columns: repeat(5, 0.15fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr;
     grid-template-areas:
-    "mallhome storehome storeaboutus storeproduct storecontact" ;
+    "mallhome storehome storeaboutus storecontact storeproduct" ;
     padding: 10px;
+    
 
 
 }
@@ -56,6 +59,7 @@
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: coral;
 
 }
 .store-home{
@@ -63,6 +67,7 @@
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: coral;
 
 }
 .store-aboutus{
@@ -70,25 +75,45 @@
     padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: coral;
 
 }
 .store-product{
     grid-area: storeproduct;
     padding: 5px;
-    border: 1px solid black;
     border-radius: 10px;
+    background-color: coral;
+    border: 1px solid black;
+
 
 }
+.store-contact{
+  grid-area: storecontact;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: coral;
+
+}
+
+
 
 .store-product{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: fr;
-    grid-gap: 20px;
+    grid-template-rows: 1fr;
+    
+    /* grid-gap: 20px; */
   }
-
+.store-dropbtn{
+  font-size: inherit;  
+  padding: 5px;
+  font-size: 18px;
+  
+}
 .store-dropdown{
     float: left;
+    
   }
   .store-dropdown-content{
     display: none;
@@ -97,6 +122,8 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 10px;
+    
   }
 
   .store-dropdown-content a{
@@ -135,13 +162,7 @@
     cursor: pointer;
   }
 
-.store-contact{
-    grid-area: storecontact;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 10px;
 
-}
 
 
 .mall-home a, .store-home a, .store-aboutus a, .store-product a, .store-contact a{
@@ -167,29 +188,70 @@
     border-radius: 20px;
     text-align: center;
     margin-left : 15%;
-    margin-top: 15%;
+    /* margin-top: 15%; */
     margin-bottom: 15%;
+    
 }
-  .store-content .brand-logo img{
+.featured-product{
+  border-top: 1px solid black;
+  border-radius: 20px;
+}
+.item1, .item2, .item3{
+  padding: 10px;
+  
+}
+.section1, .section2{
+  border-top: 1px solid black;
+  
+}
+.section-tittle{
+  padding: 10px;
+}
+
+.item{
+  border-top: 1px solid black;
+}
+
+.featured-product{
+  text-align: center;
+}
+
+.featured-product .item-photo{
+  margin: auto;
+   
+  
+}
+
+.featured-product .item-photo img{
+  max-width: 20%;
+  max-height: 20%;
+  margin: 5px;
+  background-color: white; 
+}
+
+
+.store-content .brand-logo img{
     width: 40%;
     border-radius: 20px;
-  }
-  .store-content h2{
+}
+.store-content h2{
     margin: 1%;
-  }
-  .store-content p{
-  }
-  .store-content .products img{
+}
+.store-content p{
+}
+.store-content .products img{
     width: 50%;
-  }
+}
 /* Footer style */
 
 .store-footer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-    "copyright tos privacy" ;
+    ". copyright . tos . privacy"
+    ". . . . . .";
+    padding-bottom: 50px;
 
 }
 .store-copyright{
@@ -206,4 +268,41 @@
     text-decoration: none;
     font-size: 18px;
     color: black;
+}
+
+
+
+
+.cookie-container{
+  position: fixed;
+  text-align: center;
+  bottom: -100%; 
+  left: 0;
+  right: 0;
+  padding: 2rem;  
+  background-color: coral;
+  transition: 400ms;
+}
+.cookie-container.active {
+  bottom: 0;
+}
+.cookie-container p{
+  font-size: 32px;
+}
+
+.cookie-container a{
+  font-size: 32px;
+  color: black;
+}
+
+.cookie-btn{
+  background-color: #f3f3f3;
+  color: coral;
+  cursor: pointer;
+  padding: 5px 20px;
+  font-size: 32px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+
 }
