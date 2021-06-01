@@ -1,11 +1,31 @@
+<?php
+    include "get_item_functions.php";
+    include "sort_functions.php";
+    
+    $stores = read_all_file("stores.csv");
+
+    session_start();
+    if(file_exists("installation.php")){
+      die("<script>alert('Please delete installation.php first')</script>");
+    }
+
+
+
+   
+    
+
+?>
+
+
+
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/style-header-footer.css">
-        <link rel="stylesheet" href="../style/style-browse.css">
+        <link rel="stylesheet" href= "style/style-header-footer.css">
+        <link rel="stylesheet" href="style/style-browse.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <title>Browse By Name</title>
