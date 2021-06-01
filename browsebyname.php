@@ -1,10 +1,31 @@
+<?php
+    include "get_item_functions.php";
+    include "sort_functions.php";
+    
+    $stores = read_all_file("stores.csv");
+
+    session_start();
+    if(file_exists("installation.php")){
+      die("<script>alert('Please delete installation.php first')</script>");
+    }
+
+
+
+   
+    
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/style-header-footer.css">
-        <link rel="stylesheet" href="../style/style-browse.css">
+        <link rel="stylesheet" href= "style/style-header-footer.css">
+        <link rel="stylesheet" href="style/style-browse.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <title>Browse By Name</title>
@@ -37,10 +58,7 @@
                        <a href="../sub/faqs.html">FAQs</a>
                    </div>
                    <div class="item">
-
-                       <a href="../sub/login.php">My Account</a>
-
-
+                       <a href="../sub/login.html">My Account</a>
                    </div>
                    <div class="dropdown">
                        <a href="" class="dropbtn">Browse</a>
@@ -50,9 +68,7 @@
                        </div>
                    </div>
                    <div class="item">
-                    <a href="shopping-cart.html">Shopping cart</a>
-
-
+                    <a href="shopping-cart.html">Shopping cart</a> 
                 </div>
             </div>
 
@@ -101,8 +117,7 @@
                 <div class="copyrights">
                     <a href="../sub/copyrights.html"><span>&copy;</span>Horange. All Rights Reserved</a>
                 </div>
-                <div class="tos">
-
+                <div class="tos">                    
                     <a href="../sub/tos.html">Terms of Service</a>
                 </div>
                 <div class="privacy">
