@@ -1,53 +1,89 @@
 <?php
+session_start();
 
-$error = [];
-$fname = $_POST["fname"]  ?? "";
-$lname = $_POST["lname"]  ?? "";
-$password =$_POST["password"]  ?? "";
-$cpassword =$_POST["password_confirm"]  ?? "";
-$email = $_POST["email"]  ?? "";
-$phone = $_POST["phone"]  ?? "";
-$address = $_POST["address"]  ?? "";
-$city = $_POST["city"]  ?? "";
-$zip = $_POST["zip"]  ?? "";
+require 'read.php';
 
-if(!file_exists("../account/account.csv")){
-  $fp = fopen("../account/account.csv", "w");
+if (isset($_SESSION["loggedIn"])) {
+  header("Location: profile.php");
+}
+
+if(!file_exists("../../account.csv")){
+  $fp = fopen("../../account.csv", "w");
   fwrite($fp, "email, password, phone, fname, lname, address, city, zipcode\n");
   fclose($fp);
 }
+
+$account = readCSV('../../account.csv');
+
+
+
+$fname_error = $lname_error = $password_error = $passwordconfirm_error = $email_error = $phone_error =$address_error =$zip_error = $city_error = '';
+
+
 
 $mail_patt = "/^([A-Za-z0-9]+\.?){2,}[^.]\@(\w\.?)*[^\.]\.[A-Za-z]{2,5}$/";
 $phone_patt = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
 
 
-  if (isset($_POST["submit"])){
-    $validation = true;
-    if (empty($fname)) {
+
+if (isset($_POST["submit"])){
+   $validation = true;
+    if (empty($_POST["fname"])) {
       $validation = false;
-      $error = 'dit me mey';
+      $fname_error = 'Please enter firstname';
     }
-    else if ($fname.trim().length<3) {
+    if (empty($_POST["lname"])) {
       $validation = false;
+      $lname_error = 'Please enter lastname';
     }
-    if (preg_match($phone_patt, $phone)) {
+    if (empty($_POST["pass"])) {
       $validation = false;
-      $error = "Invalid phone";
+      $password_error = 'Please enter password';
     }
-    if(!preg_match($mail_patt,$email)){
+    if($_POST["pass"]!=$_POST["password_confirm"]){
+      $validation = false;
+      $passwordconfirm_error = 'Passwords are not matched';
+    }
+    if (empty($_POST["email"])) {
+      $validation = false;
+      $email_error = 'Please enter email';
+    }
+    if (preg_match($phone_patt, $_POST["phone"])) {
+      $validation = false;
+      $phone_error = 'Please enter phone';
+    }
+    foreach ($account as $a) {
+      if ($_POST["email"] == $a["email"]) {
         $validation = false;
-        $error = "Invalid email";
-  }
+        $email_error= "Email already exist";
+      }
+      if ($_POST["phone"] == $a[" phone"]) {
+        $validation = false;
+        $phone_error = "Phone number already registered";
+      }
+    }
+    if (empty($_POST["address"])) {
+      $validation = false;
+      $address_error = 'Please enter address';
+    }
+    if (empty($_POST["city"])) {
+      $validation = false;
+      $city_error = 'Please enter city';
+    }
+    if (empty($_POST["zip"])) {
+      $validation = false;
+      $zip_error = 'Please enter zip';
+    }
     if($validation){
-        $hash = password_hash($password,1); // crypt password
-        $fp= fopen("../acount/account.csv","a");
-        fwrite($fp,"{$email},{$hash},{$phone},"); //Ghi het ra cho no tuong duong voi line 11
+        $hash = password_hash($_POST["pass"],1);
+        $fp= fopen("../../account.csv","a");
+        fwrite($fp,"{$_POST['email']},{$hash},{$_POST['phone']},{$_POST['fname']},{$_POST['lname']},{$_POST['address']},{$_POST['city']},{$_POST['zip']}\n");
         fclose($fp);
         header("Location: login.php");
 }
 }
 
-  ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -86,7 +122,7 @@ $phone_patt = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
                <a href="../sub/faqs.html">FAQs</a>
            </div>
            <div class="item">
-               <a href="../sub/login.html">My Account</a>
+               <a href="../sub/login.php">My Account</a>
            </div>
            <div class="dropdown">
                <a href="" class="dropbtn">Browse</a>
@@ -98,31 +134,31 @@ $phone_patt = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
         </div>
     </div>
   </div>
-  <form class="" action="../php/register.php" method="post">
+  <form class="" action="" method="post">
     <div class="sign-form">
       <img src="../img/logo.png" alt="logo">
       <div class="inner-box">
           <h1>Sign Up </h1>
           <input type="text" name="fname" placeholder="Your first name" class ="signup-box " >
           <br>
-        <span name="fname-error" class = "error" value ="<<?php echo $error  ?>"></span>
+        <span name="fname-error" class = "error" ><?php echo $fname_error  ?></span>
 
           <input type="text" name="lname" placeholder="Your last name" class ="signup-box" >
           <br>
-        <span name="lname-error" class = "error"></span>
+        <span name="lname-error" class = "error"><?php echo $lname_error  ?></span>
 
           <input type="email" name="email" placeholder="Your email adress" class ="signup-box">
 
           <br>
-        <span name="email-error" class = "error"></span>
+        <span name="email-error" class = "error"><?php echo $email_error  ?></span>
                   <br>
 
-          <input type="tel" name="phone" placeholder="Your phone number" class ="signup-box" pattern="[0-9]{10}">
+          <input type="text" name="phone" placeholder="Your phone number" class ="signup-box" pattern="[0-9]{10}">
           <br>
-        <span name="phone_error" class = "error"></span>
+        <span name="phone_error" class = "error"><?php echo $phone_error  ?></span>
 
           <div id="password_div" class = "password_element">
-          <input type="password" placeholder="Your password" name ="password" class ="signup-box" name = "password-field">
+          <input type="password" placeholder="Your password" name ="pass" class ="signup-box" name = "password-field">
           <br>
           <span name="password-error" class = "error"></span>
           <div class="toggle-password">
@@ -151,19 +187,19 @@ $phone_patt = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
 
           <input type="password" name="password_confirm" placeholder="Confirm password" name = "password_confirm" class ="signup-box">
           <br>
-          <span name="passwordconfirm-error" class = "error" ></span>
+          <span name="passwordconfirm-error" class = "error" ><?php echo $passwordconfirm_error  ?></span>
 
           <input type="text" name="address" placeholder="Your address" class="signup-box">
           <br>
-        <span name="address-error" class = "error" ></span>
+        <span name="address-error" class = "error" ><?php echo $address_error  ?></span>
 
           <input type="text" name="city" placeholder="Your city" class="signup-box">
           <br>
-        <span name="city-error" class = "error"></span>
+        <span name="city-error" class = "error"><?php echo $city_error  ?></span>
 
           <input type="number" name="zip" placeholder="ZIP code" class="signup-box">
           <br>
-        <span name="zip-error" class = "error"></span>
+        <span name="zip-error" class = "error"><?php echo $zip_error  ?></span>
 
           </div>
           <div class="country">
@@ -416,11 +452,11 @@ $phone_patt = "/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/";
                   <option value="ZW">Zimbabwe</option>
             </select>
             </div>
-          <button type="submit" class="sign-button">Sign up
+          <button type="submit"  class="sign-button" name="submit">Sign up
           </button>
         </form>
           <hr>
-          <p><span>Already register?</span><a href="../sub/login.html"  class="und" > Sign In</a></p>
+          <p><span>Already register?</span><a href="../sub/login.php"  class="und" > Sign In</a></p>
           <br>
       </div>
       <div class="footer">

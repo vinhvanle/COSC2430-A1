@@ -1,3 +1,24 @@
+<?php
+session_start();
+if (isset($_SESSION["loggedIn"])){
+  header("Location: profile.php");
+}
+require "read.php";
+
+$account = readCSV("../../account.csv");
+if(isset($_POST["login"])){
+  foreach ($account as $a) {
+    if ($_POST["mail"] == $a["email"]) {
+      if (password_verify($_POST["pass"], $a[" password"])) {
+        $_SESSION["loggedIn"]= true;
+        $_SESSION["userData"]= $a;
+        header("Location: profile.php");
+      }
+    }
+  }
+}
+
+  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -35,7 +56,7 @@
                <a href="../sub/faqs.html">FAQs</a>
            </div>
            <div class="item">
-               <a href="../sub/login.html">My Account</a>
+               <a href="../sub/login.php">My Account</a>
            </div>
            <div class="dropdown">
                <a href="" class="dropbtn">Browse</a>
@@ -47,32 +68,36 @@
         </div>
     </div>
   </div>
-  <form class="sign-form" action="../sub/logged.html" method ='post'  onsubmit = "return validated()">
+  <form class="sign-form" action="login.php" method ='post'  onsubmit = "return validated()">
       <img src="../img/logo.png" alt="logo">
       <h1>Sign in </h1>
       <br>
-        <input type="text" id ="email" placeholder="  Your Email" class="signin-box">
+        <input type="text" name ="mail" placeholder="  Your Email" class="signin-box">
         <br>
-        <div id = email_error class="log-error">
-          Invalid email
+        <div name = email_error class="log-error">
         </div>
         <br>
         <br>
-        <input type="password" id="password" placeholder="  Your Password" class="signin-box">
+        <input type="password" name="pass" placeholder="  Your Password" class="signin-box">
         <br>
         <div id = pass_error class="log-error">
           Wrong password
         </div>
         <br>
         <br>
-        <button type = submit id ="signin-button" class="sign-button">Sign In</button>
+        <button type = submit name ="login" class="sign-button">Sign In</button>
         <p><a href="../sub/forgot.html" class = "und">Forgot password?</a></p>
         <br>
         <hr>
         <br>
-        <p><a href="../sub/mid.html" class = "und">Create new account</a></p>
+        <p><a href="../sub/register.php" class = "und">Create new account</a></p>
         <br>
     </form>
+    <?php
+    if(isset($_POST["login"])){
+      echo ('<p>Invalid User</p>');
+    }
+      ?>
     <div class="grid">
         <div class="footer">
             <div class="copyrights">
